@@ -1,0 +1,437 @@
+
+#rheading{
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* justify-content: center; */
+  /* padding: 200px; */
+  margin-top: 10px;
+    gap: 40px;
+  }
+  
+   
+      #lheading{
+        display: flex;
+        gap: 30px;
+      }
+      #heading{
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        padding-left:  7%;
+        padding-right:  7%;
+        margin-bottom: -5px;
+  
+      }
+      
+      #companyLogo{
+        padding-top:  5%;
+      }
+  .rhalign{
+    display: flex;
+    gap: 10px;
+  }
+  #Download{
+    background-color: rgb(235, 239, 239);
+    margin-top: -10px;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+  
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+  
+  }
+  #Download button{
+    background-color: none;
+  
+  border: none  ;
+  }
+  #Download:hover{
+    background-color: rgb(144, 182, 182);
+  
+  }
+  #Download button:hover{
+    background-color:  rgb(144, 182, 182);
+  
+  
+  }
+  #login{
+    border: none;
+    background-color: white;
+  }
+  #off{
+     border: none;
+    background-color: white;
+    margin-top: -20px;
+
+  }
+  #cart{
+    border: none;
+    background-color: white;
+
+
+  }
+  #deliver{
+    padding-left: 15px;
+
+    margin-top: -10px;
+    margin-bottom: -35px;
+    color: rgb(126, 116, 104);
+  }
+ 
+  #EnterAddress{
+    margin-top: -10px;
+
+    padding-left: 10px;
+
+    /* margin-bottom: 50px; */
+    color:rgb(36, 36, 62)
+  }
+  h4{
+    margin-top: -10px;
+    /* margin-bottom: 50px; */
+    color:rgb(36, 36, 62)
+  }
+  /* h4:hover{
+    display: none;
+  } */
+  
+      /* ****************************************Style for nav*************************************************************************** */
+  
+  
+  
+      #nav{
+        display: flex;
+        gap:20px;
+        margin: auto;
+        justify-content: center;
+        margin-top: -2px;
+        margin-bottom: -2px;
+  
+      }
+      #nav button{
+        background-color: white;
+        border: none;
+      }
+  
+  
+  /* ******************************************************** style for search product************************************************************************************** */
+    
+  #search{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+  #search h2{
+    margin-bottom: 30px;
+    text-align: left;
+    display:flex ;
+  }
+  
+  #search #button{
+    background-color:#10847e;
+    border: none;
+      /* border-color: black; */
+      border-radius: 20px;
+      color: white;
+      width:10%;
+      height:40px;
+  }
+  #search #button:hover{
+    background-color:#043c39;
+  
+  }
+  #search input{
+    margin: -7px;
+    margin-right: 5px;
+    height:40px;
+    width:88%;
+    border: 1px solid silver;
+    background-color: white;
+    border-radius: 30px;
+  
+  }
+  
+  
+  /* ***************************************************style for service************************************************************* */
+  
+  
+  
+      #services{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        padding-left: 16%;
+        padding-right: 16%;
+        text-align: center;
+        gap: 10px;
+      }
+      #services>div img{
+        width: 120px;
+      }
+      #services>div:hover{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #services>div p{
+        margin-top: -10px;
+        color: red;
+      }
+      #services>div h3{
+    margin-top: 0px;
+  
+  }
+  #services hr{
+    margin-top: -4px;
+  }
+  /* *******************************************offer ****************************************************************************************** */
+  
+  
+      #offers{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        padding-left: 6%;
+        gap: 5px;
+      }
+  #offers img{
+    width:95%  
+  }
+  /* ***************************************footer 1************************************************************************* */
+  #footer1{
+    padding-left:6% ;
+    background-color:rgb(214, 215, 221);
+  
+  }
+  
+  
+  #parent {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+  }
+  #footer1 h2{
+    padding-top: 20px;
+    margin-top: 80px;
+  }
+  #parent img{
+    width: 50%;
+  }
+  #child{
+    display: flex;
+    gap: 20px;
+    text-align: justify;
+  }
+  /* ************************************* reviews ***************************************************************************************** */
+  #reviews{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+  }
+  #reviews h3{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #reviews p{
+    text-align: justify ;
+  }
+  #kkr{
+    padding-left: 6%;
+    margin-top: 40px;
+  
+  }
+  #reviews>div{
+    background-color:rgb(214, 215, 221);
+    padding: 40px;
+  
+  }
+  /* *********************bottom section *************************************************** */
+  #bottom{
+  
+    margin-top: 50px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 30px;
+  /* justify-content: space-evenly; */
+}
+  #social_media{
+    display: flex;
+    gap: 18px;
+  }
+    #payment_partners{
+      margin-top: 30px;
+      display: flex;
+      gap: 30px;
+      padding-bottom: 100px;
+    }  
+    #payment_partners img{
+      width: 45px;
+      height: 30px;
+    }
+  
+  
+  #bottomSection{
+    background-color:rgb(214, 215, 221);
+  
+  }
+  #EnterAddress{
+    color:brown
+  }
+ 
+  
+  
+  @media only screen and (max-width: 800px) {
+ #deliver{
+  display: none;
+ }
+ #Download{
+    display: none;
+
+
+ }
+
+
+    
+    #nav{
+        display: none;
+    }
+    hr{
+        display: none;
+    }
+
+
+
+      #search_input{
+display: flex;
+flex-direction: column;
+
+gap: 10px;
+    } 
+    #search #button     {
+        width:100px;
+        height:40px;
+       
+    }
+  #services{
+         grid-template-columns: repeat(4,1fr);
+    }
+
+
+      #offers{
+                grid-template-columns: repeat(2,1fr);
+
+      }
+      #parent{
+            grid-template-columns: repeat(2,1fr);
+
+      }
+         #reviews{
+    grid-template-columns: repeat(2,1fr);
+  }
+#bottom{
+      grid-template-columns: repeat(2,1fr);
+
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    #deliver{
+        display: none;
+       }
+       #Download{
+          display: none;
+      
+      
+       }
+       #off{
+        display: none;
+       }
+       #cart{
+        display: none;
+       }
+        .rightHeading{
+            display: none;
+
+
+        }
+        #login{
+          width: 50px;
+        }
+       
+       #companyLogo{
+        width: 120px;
+        margin-right: 20px;
+
+       }
+     
+
+    
+
+
+    #nav{
+        display: none;
+    }
+    hr{
+        display: none;
+    }
+
+
+
+    /* #search{
+
+    } */
+    /* #search_input{
+        width: 100%;
+
+    }*/
+    #search_input{
+          display: flex;
+          flex-direction: column;
+
+          gap: 10px;
+    } 
+    #search #button     {
+        width:100px;
+        height:40px;
+       
+    }
+
+
+
+    #services{
+         grid-template-columns: repeat(2,1fr);
+    }
+    #offers{
+              grid-template-columns: repeat(1,1fr);
+
+    }
+
+
+      #parent{
+            grid-template-columns: repeat(1,1fr);
+
+      }
+       #reviews{
+    grid-template-columns: repeat(1,1fr);
+  }
+#bottom{
+      grid-template-columns: repeat(1,1fr);
+
+}
+#payment_partners{
+  /* flex-direction: column; */
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+#payment{
+    margin-top: 50px;
+
+
+}
+}
