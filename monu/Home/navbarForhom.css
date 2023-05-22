@@ -526,7 +526,37 @@ to {opacity: 1}
     }
 }
 
+#services{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    padding-left: 6%;
+    padding-right: 6%;
+    text-align: center;
+    gap: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  #services>div img{
+    width: 120px;
+  }
+  #services>div:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  #services>div p{
+    margin-top: 3px;
+    color: red;
+  }
+  #services>div h3{
+margin-top: 0px;
 
+}
+#services>div{
+    margin-right: 20px;
+    margin-left: 20px;
+    }
+#services hr{
+margin-top: -4px;
+}
 
 #serving{
     background-color: #c4eeec;
@@ -609,6 +639,9 @@ figure>img{
     left:0;
     animation: 10s slide infinite;
 }
+
+
+
 #slide figure img{
     float:left;
     width:16.5% ;
