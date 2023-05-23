@@ -1,0 +1,82 @@
+.wrapper{
+    /* max-width: 450px;
+    height: 45px;
+    width: 500px;
+    margin:  auto;
+    border: none;
+    background-color: blue;
+    resize: none;
+    outline: none; */
+    width: 500px;
+    /* border: 1px solid rgb(29, 33, 161) */
+    /* background-color: rgb(206, 13, 13); */
+  }
+  
+.wrapper .search-input{
+   transform-origin: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    
+}
+  
+.search-input input{
+    height: 50px;
+    width: 100%;
+    outline: none;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    border: 0;
+}
+  
+  .search-input.active input{
+    border-radius: 0;
+  }
+  
+  .search-input .autocom-box{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    /* overflow-y: auto; */
+  }
+  
+  .search-input.active .autocom-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+    /* border: 1px solid black; */
+  }
+  
+  .autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+  }
+  
+  .search-input.active .autocom-box li{
+    display: block;
+    background:   #f6f8f9;
+  }
+  .autocom-box li:hover{
+    cursor: pointer;
+  }
+  
+  .search-input .icon{
+    position: absolute;
+    right: -40px;
+    top: 0px;
+    height: 45px;
+    width: 35px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+  }
