@@ -51,69 +51,70 @@
 </head>
 <body>
     <div id="parent"></div>
+    <!-- <a href="../monu/Product-Details/product-detail.html"></a> -->
 </body>
 </html>
 
 <script>
-    productArray = [{
+   var productArray = [{
         id : 1,
         name : "Everherb (by pharmeasy) Ashwagandha",
         img_url : "https://cdn01.pharmeasy.in/dam/products_otc/P54860/everherb-by-pharmeasy-ashwagandha-immunity-booster-capsules-anxiety-stress-relief-bottle-of-90-2-1681543142.jpg",
-        price : 'MRP'+'₹599',
-        finalPrice : 'MRP'+'₹399.50',
+        price : '599',
+        finalPrice : '399.50',
         btn : "Add To Cart"
     },
     {   id : 2,
         name : "Everherb (by pharmeasy) Karela",
         img_url : "https://cdn01.pharmeasy.in/dam/products_otc/B55847/everherb-by-pharmeasy-karela-blood-sugar-control-lowers-bad-cholestrol-bottle-of-60-2-1661760071.jpg",
-        price : 'MRP'+'₹599',
-        finalPrice : 'MRP'+'₹311.48',
+        price : '599',
+        finalPrice : '311.48',
         btn : "Add To Cart"
     },
     {   id : 3,
         name : "Everherb (by pharmeasy) Amla",
         img_url : "https://cdn01.pharmeasy.in/dam/products_otc/T18833/everherb-by-pharmeasy-amla-immunity-booster-capsules-natural-vitamin-c-bottle-of-60-2-1661863079.jpg",
-        price : 'MRP'+'₹299.50',
-        finalPrice : 'MRP'+'₹250.48',
+        price : '299.50',
+        finalPrice : '250.48',
         btn : "Add To Cart"
     },
     {   id : 4,
         name : "Everherb (by pharmeasy) Moringa",
         img_url : "https://cdn01.pharmeasy.in/dam/products_otc/H62199/everherb-by-pharmeasy-moringa-drum-stick-immunity-booster-capsules-natural-multivitamin-bottle-of-60-2-1661760057.jpg",
-        price : 'MRP'+'₹599',
-        finalPrice : 'MRP'+'₹299.50',
+        price : '599',
+        finalPrice : '299.50',
         btn : "Add To Cart"
     },
        {id : 5,
         name : "Pharmeasy Multivitamin",
         img_url : "https://cdn01.pharmeasy.in/dam/products_otc/E54733/pharmeasy-multivitamin-gummies-for-kids-and-adults-healthy-growth-immunity-bottle-of-30-2-1671743494.jpg",
-        price : 'MRP'+'₹699',
-        finalPrice : 'MRP'+'₹419.50',
+        price : '699',
+        finalPrice : '419.50',
         btn : "Add To Cart"
     },
     {   id : 6,
         name : "Pharmeasy Glutathion",
         img_url : "https://cdn01.pharmeasy.in/dam/products_otc/G70731/pharmeasy-glutathione-promotes-healthy-skin-reverses-signs-of-ageing-bottle-of-30-2-1671743915.jpg",
-        price : 'MRP'+'₹1399',
-        finalPrice : 'MRP'+'₹769.50',
+        price : '1399',
+        finalPrice : '769.50',
         btn : "Add To Cart"
     },
     {   id : 7,
         name : "Liveasy Bandage",
         img_url :"https://cdn01.pharmeasy.in/dam/products_otc/Q16893/liveasy-ortho-care-cotton-crepe-bandage-reduces-strain-sprain-swelling-10-cms-x-4-meters-2-1656420284.jpg",
-        price : 'MRP'+'₹225',
-        finalPrice : 'MRP'+'₹199.50',
+        price : '225',
+        finalPrice : '199.50',
         btn : "Add To Cart"
     },
     {   id : 8,
         name : "Liveasy Diabetic Protein Powder",
         img_url : "https://cdn01.pharmeasy.in/dam/products_otc/H14523/liveasy-wellness-diabetic-protein-powder-chocolate-flavour-400g-2-1671742949.jpg",
-        price : 'MRP'+'₹999',
-        finalPrice : 'MRP'+'₹559.50',
+        price : '999',
+        finalPrice : '559.50',
         btn : "Add To Cart"
     },]
     
-    displayProduct();
+    displayProduct(productArray);
     function displayProduct(){
         productArray.map(function(elem){
             var div = document.createElement("div");
@@ -137,6 +138,9 @@
             div.addEventListener("click",function(){
                 displayInfo(elem);
             })
+            div.addEventListener("click",function(){
+                  navToNextPage(elem);
+                });
 
             priceBox.append(price,finalPrice);
 
@@ -146,6 +150,13 @@
         })
     }
 
+    var product_desc = [];
+          function navToNextPage(product){
+          product_desc.push(product);
+          localStorage.setItem("Prodct-Data",JSON.stringify(product_desc));
+          window.location.href="../monu/Product-Details/product-detail.html";
+      }
+
     var products = JSON.parse(localStorage.getItem("productInfo")) || [];
 
     function displayInfo(productArray){
@@ -153,6 +164,7 @@
         localStorage.setItem("productInfo",JSON.stringify(products));
         link.setAttribute("href",productDetails.html);   
     }
+    
 
 
 
