@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine</title>
+    <style>
+        #parent{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            margin-top: 100px;
+        }
+        #parent>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            text-align: center;
+            border-radius: 10px;
+            padding-bottom: 40px;
+        }
+        #parent>div>img{
+            width: 50%;
+            padding-top: 25px;
+        }
+        p:first-child{
+            text-decoration: line-through;
+        }
+        button{
+            color: aliceblue;
+            padding: 10px 20px;
+            background-color:darkcyan;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #parent>div:hover{
+            border: 1px solid rgb(45, 128, 45);
+        }
+
+        button:hover{
+            transform: scale(1.1);
+        }
+        button:active{
+            color:aliceblue;
+            background-color: black;
+        
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="parent"></div>
+</body>
+</html>
+
+<script>
+    productArray = [{
+        id : 1,
+        name : "Everherb (by pharmeasy) Ashwagandha",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/P54860/everherb-by-pharmeasy-ashwagandha-immunity-booster-capsules-anxiety-stress-relief-bottle-of-90-2-1681543142.jpg",
+        price : 'MRP'+'₹599',
+        finalPrice : 'MRP'+'₹399.50',
+        btn : "Add To Cart"
+    },
+    {   id : 2,
+        name : "Everherb (by pharmeasy) Karela",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/B55847/everherb-by-pharmeasy-karela-blood-sugar-control-lowers-bad-cholestrol-bottle-of-60-2-1661760071.jpg",
+        price : 'MRP'+'₹599',
+        finalPrice : 'MRP'+'₹311.48',
+        btn : "Add To Cart"
+    },
+    {   id : 3,
+        name : "Everherb (by pharmeasy) Amla",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/T18833/everherb-by-pharmeasy-amla-immunity-booster-capsules-natural-vitamin-c-bottle-of-60-2-1661863079.jpg",
+        price : 'MRP'+'₹299.50',
+        finalPrice : 'MRP'+'₹250.48',
+        btn : "Add To Cart"
+    },
+    {   id : 4,
+        name : "Everherb (by pharmeasy) Moringa",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/H62199/everherb-by-pharmeasy-moringa-drum-stick-immunity-booster-capsules-natural-multivitamin-bottle-of-60-2-1661760057.jpg",
+        price : 'MRP'+'₹599',
+        finalPrice : 'MRP'+'₹299.50',
+        btn : "Add To Cart"
+    },
+       {id : 5,
+        name : "Pharmeasy Multivitamin",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/E54733/pharmeasy-multivitamin-gummies-for-kids-and-adults-healthy-growth-immunity-bottle-of-30-2-1671743494.jpg",
+        price : 'MRP'+'₹699',
+        finalPrice : 'MRP'+'₹419.50',
+        btn : "Add To Cart"
+    },
+    {   id : 6,
+        name : "Pharmeasy Glutathion",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/G70731/pharmeasy-glutathione-promotes-healthy-skin-reverses-signs-of-ageing-bottle-of-30-2-1671743915.jpg",
+        price : 'MRP'+'₹1399',
+        finalPrice : 'MRP'+'₹769.50',
+        btn : "Add To Cart"
+    },
+    {   id : 7,
+        name : "Liveasy Bandage",
+        img_url :"https://cdn01.pharmeasy.in/dam/products_otc/Q16893/liveasy-ortho-care-cotton-crepe-bandage-reduces-strain-sprain-swelling-10-cms-x-4-meters-2-1656420284.jpg",
+        price : 'MRP'+'₹225',
+        finalPrice : 'MRP'+'₹199.50',
+        btn : "Add To Cart"
+    },
+    {   id : 8,
+        name : "Liveasy Diabetic Protein Powder",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/H14523/liveasy-wellness-diabetic-protein-powder-chocolate-flavour-400g-2-1671742949.jpg",
+        price : 'MRP'+'₹999',
+        finalPrice : 'MRP'+'₹559.50',
+        btn : "Add To Cart"
+    },]
+    
+    displayProduct();
+    function displayProduct(){
+        productArray.map(function(elem){
+            var div = document.createElement("div");
+            var image = document.createElement("img");
+            image.setAttribute("src",elem.img_url);
+            image.setAttribute("alt",elem.name);
+
+            var name = document.createElement("h3");
+            name.textContent = elem.name;
+
+            var priceBox = document.createElement("div");
+
+            var finalPrice = document.createElement("p");
+            finalPrice.textContent = elem.finalPrice;
+
+            var price = document.createElement("p");
+            price.textContent = elem.price;
+
+            var button = document.createElement("button");
+            button.textContent = elem.btn;
+            div.addEventListener("click",function(){
+                displayInfo(elem);
+            })
+
+            priceBox.append(price,finalPrice);
+
+            div.append(image,name,priceBox,button);
+            document.getElementById("parent").append(div);
+
+        })
+    }
+
+    var products = JSON.parse(localStorage.getItem("productInfo")) || [];
+
+    function displayInfo(productArray){
+        products.push(productArray)
+        localStorage.setItem("productInfo",JSON.stringify(products));
+        link.setAttribute("href",productDetails.html);   
+    }
+
+
+
+
+
+
+
+</script>
