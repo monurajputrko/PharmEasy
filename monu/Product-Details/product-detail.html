@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dettol product page</title>
+  <link rel="stylesheet" href="dettol.css" />
+<style>
+
+#img{
+        cursor: pointer;
+      }
+#monu-parent{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+gap: 100px;
+
+margin-left: 50px;
+
+}
+#mainImage img{
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    width: 30%;
+    padding:20px 100px 20px 100px;
+}
+
+#pAngle{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:50px;
+    margin-left: 15px;
+    margin-right: 15px;
+      }
+    #pAngle img{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                width: 60%;
+    }
+
+#parent{
+    display: flex;
+    margin-top: 100px;
+
+
+}
+#productDetails{
+    margin-left: -30px;
+}
+#productDetails img{
+    margin-top: -10px;
+        /* height: 40%; */
+    width: 20%;
+    margin-bottom: -20px;
+}
+#ratings{
+    display: flex;
+    gap: 15px;
+}
+#deliverBy{
+    margin-top: -20px;
+    margin-bottom: -20px;
+
+    display: flex;
+    gap: 10px;
+}
+#deliverBy p{
+    margin-top: 20px;
+}
+#packsize{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 8px;
+    text-align: center;
+margin-top: -20px;
+}
+#packsize p{
+    border: 1px solid silver;
+    padding: 10px;
+    border-radius: 8px;
+
+
+}
+h5{
+    margin-top: -10px;
+}
+#rightside{
+    /* margin-left: 150px; */
+    margin-top: 150px;
+
+}
+#addToCart{
+    width: 150%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color:#10847e;
+
+
+}
+
+#addToCart h3{
+    margin-top: 8px;
+
+}
+#viewcart{
+    margin-left: 100px;
+}
+#viewcart button{
+    
+    width: 150%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    background-color:#9da7a7;
+
+
+}
+#viewcart h3{
+    margin-top: 8px;
+
+}
+#bottom{
+  
+    margin-top: 50px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 30px;
+  /* justify-content: space-evenly; */
+  }
+  #social_media{
+    display: flex;
+    gap: 18px;
+  }
+    #payment_partners{
+      margin-top: 30px;
+      display: flex;
+      gap: 30px;
+      padding-bottom: 100px;
+    }  
+    #payment_partners img{
+      width: 45px;
+      height: 30px;
+    }
+  
+  
+  #bottomSection{
+    background-color:rgb(214, 215, 221);
+  
+  }
+  #EnterAddress{
+    color:brown
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#rheading{
+    display: flex;
+    /* justify-content: space-evenly; */
+    /* justify-content: center; */
+  /* padding: 200px; */
+  margin-top: 10px;
+    gap: 40px;
+  }
+  
+   
+      #lheading{  
+        display: flex;
+        gap: 50px;
+      }
+      #heading{
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        padding-left:  7%;
+        padding-right:  7%;
+        margin-bottom: -5px;
+  
+      }
+      
+      #companyLogo{
+        padding-top:  5%;
+      }
+  .rhalign{
+    display: flex;
+    gap: 10px;
+  }
+  #Download{
+    background-color: rgb(235, 239, 239);
+    margin-top: -10px;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+  
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+  
+  }
+  #Download button{
+    background-color: none;
+  
+  border: none  ;
+  }
+  #Download:hover{
+    background-color: rgb(144, 182, 182);
+  
+  }
+  #Download button:hover{
+    background-color:  rgb(144, 182, 182);
+  
+  
+  }
+  #login{
+    border: none;
+    background-color: white;
+  }
+  #off{
+     border: none;
+    background-color: white;
+
+  }
+  #cart{
+    border: none;
+    background-color: white;
+
+
+  }
+  #deliver{
+    margin-top: -10px;
+    margin-bottom: -35px;
+  }
+ 
+  #EnterAddress{
+    margin-top: -10px;
+    padding-left: 10px;
+    /* margin-bottom: 50px; */
+    color:rgb(36, 36, 62)
+  }
+  
+      /* ****************************************Style for nav*************************************************************************** */
+  
+  
+  
+      #nav{
+        display: flex;
+        gap:20px;
+        margin: auto;
+        justify-content: center;
+        margin-top: -2px;
+        margin-bottom: -2px;
+  
+      }
+      #nav button{
+        background-color: white;
+        border: none;
+      }
+  
+  /* ************************************style for search************************ */
+ 
+
+  #search{
+    /* background-color: rgb(235, 239, 239); */
+    margin-top: 10px;
+    /* margin-right: -15px;
+    margin-left: -15px; */
+    /* margin-bottom: 10px; */
+display: flex;
+
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 1005px;
+    padding-bottom: 10px;
+  
+  }
+
+  #search h2{
+    margin-bottom: 30px;
+    text-align: center;
+    display:flex ;
+  }
+  
+  #search_input #button{
+    background-color:#10847e;
+    border: none;
+      border-radius: 20px;
+      color: white;
+      width:18%;
+      height:90%;
+      margin-right: 2px;
+      margin-top: 2px;
+  }
+  #search_input #button:hover{
+    background-color:#043c39;
+  
+  }
+  #search_input{
+    /* margin: -1px; */
+    
+    margin-right: 5px;
+    height:40px;
+    width:35%;
+    border: 1px solid silver;
+    background-color: white;
+    border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  }
+#inputP{
+    margin-left: 20px;
+width: 100%;
+    padding-left: 50px;
+    border: none;
+}
+
+
+      @media only screen and (max-width: 800px) {
+ #deliver{
+  display: none;
+ }
+ #Download{
+    display: none;
+
+
+ }
+
+
+    
+    #nav{
+        display: none;
+    }
+    hr{
+        display: none;
+    }
+
+
+    #search_input #inputP{
+        width: 70%;
+        margin-left: 10px;
+        margin-top: 10px;
+        padding-left: 0px;
+
+
+
+    }
+    #search_input{
+        /* margin-top: 80px; */
+          display: flex;
+          flex-direction: column;
+          width: 150px;
+          height:40px;
+          gap: 25px;
+    } 
+    #search_input #button     {
+        width:50%;
+        height:80%;
+        margin-left: 60px;
+
+       
+    }
+
+
+
+  #services{
+         grid-template-columns: repeat(4,1fr);
+    }
+
+
+      #offers{
+                grid-template-columns: repeat(2,1fr);
+
+      }
+      #parent{
+            grid-template-columns: repeat(2,1fr);
+
+      }
+         #reviews{
+    grid-template-columns: repeat(2,1fr);
+  }
+#bottom{
+      grid-template-columns: repeat(2,1fr);
+
+}
+#parent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#monu-parent{
+  margin-top: 100px;
+}
+
+#viewcart button{
+
+width: 70%;
+
+}
+#addToCart{
+margin-left: 15%;
+
+width: 70%;
+
+}
+#pAngle{
+  gap: 20px;
+
+}
+#pAngle img{
+  width: 100%;
+  height:50px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  /* border: 1px solid silver; */
+
+}
+#bottom{
+      grid-template-columns: repeat(2,1fr);
+
+}
+
+
+} 
+
+
+
+@media only screen and (max-width: 500px) {
+
+    #deliver{
+        display: none;
+       }
+       #Download{
+          display: none;
+      
+      
+       }
+       #off{
+        display: none;
+       }
+       #cart{
+        display: none;
+       }
+        .rightHeading{
+            display: none;
+
+
+        }
+        #login{
+          width: 50px;
+          margin-left: -10px;
+        }
+       
+       #companyLogo{
+        width: 120px;
+        margin-right: 10px;
+
+       }
+     
+
+    
+
+
+
+    /* #search{
+
+    } */
+    #search_input #inputP{
+        width: 70%;
+        margin-left: 10px;
+        
+
+    }
+    #search_input{
+        margin-top: 80px;
+          display: flex;
+          flex-direction: column;
+          width: 100px;
+          height:40px;
+margin-left: -50px;
+          gap: 10px;
+          padding-left: 0px;
+
+    } 
+    #search_input #button     {
+        width:100px;
+        height:40px;
+        margin-left: 0px;
+
+        margin-top: 10px;
+       
+    }
+
+
+
+    #services{
+         grid-template-columns: repeat(2,1fr);
+    }
+    #offers{
+              grid-template-columns: repeat(1,1fr);
+
+    }
+
+
+      #parent{
+            grid-template-columns: repeat(1,1fr);
+
+      }
+       #reviews{
+    grid-template-columns: repeat(1,1fr);
+  }
+#bottom{
+      grid-template-columns: repeat(1,1fr);
+
+}
+#payment_partners{
+  flex-direction: column;
+}
+#parent{
+  flex-direction: column;
+}
+#productDetails{
+  padding-left: 80px;
+
+}
+#viewcart button{
+
+  width: 70%;
+
+}
+#addToCart{
+  margin-left: 15%;
+
+  width: 70%;
+
+}
+#pAngle{
+  gap: 20px;
+
+}
+/* #finalPrice{
+    text-decoration: line-through;
+} */
+p:first-child{
+            text-decoration: line-through;
+        }
+
+#pAngle img{
+  width: 100%;
+  height:50px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  /* border: 1px solid silver; */
+
+}
+#bottom{
+      grid-template-columns: repeat(1,1fr);
+
+}
+#payment_partners{
+  /* flex-direction: column; */
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+#payment{
+    margin-top: 50px;
+
+
+}
+}
+
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/50c1c9fe15.js" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+          <!-- ************************************* for heading ************************************************************ -->
+          <div id="heading">
+
+            <div id="lheading">
+              <a href="dashboard.html" > <div><img id="companyLogo" src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0"/></div></a>
+                <div id="deliver"><p>Deliver to :    </p><p id="EnterAddress"></p></div>
+                  <!-- <input placeholder="enter your delivery address" id="deliverAddress"></input></div> -->
+
+            </div>
+
+
+
+
+            <!-- <a  id="Download" href="https://apps.apple.com/IN/app/id982432643?mt=8" > <div class="rhalign">                   
+               <div id="" ><i class="fa-solid fa-mobile-button" ></i> </div>
+               <div  > <button>Download App</button></div> 
+            </div>
+            </a> -->
+
+            
+           <!-- <div id="search"> -->
+            <!-- <h2>What are you looking for?</h2> -->
+          
+            <div id="search_input">
+            <input id="inputP" placeholder="Search for medicine and healthcare items" type="text"/>
+            <button id="button">Search </button>
+            </div>
+           <!-- </div> -->
+
+           <div id="rheading">
+
+
+
+
+          <a href="login.html">  <div class="rhalign">
+
+              
+              <div> <i class="fa-regular fa-user"></i></div>
+             <div><button id="login"></button> </div>
+
+            </div></a>
+            <div class="rhalign">
+             
+        
+             
+              <div class="rightHeading"> <i class="fa-solid fa-disease"></i></i> </div>
+              <a href="offer.html"> <button id="off">Offers</button></a>
+        
+            </div >
+            <div class="rhalign">
+             
+              <div class="rightHeading"> <i class="fa-solid fa-cart-shopping fa" ></i>   </div>
+              <a href="cart.html"><button id="cart" >Cart</button></a>
+            </div>
+             
+
+
+            </div>
+
+
+       </div>
+       <hr >
+<!-- ********************************************for navar*************************************************** -->
+
+       <div id="nav">
+       <a href="medicine.html"> <button >Medicine</button></a>
+    <a href="labTest.html">    <button >Lab Test</button></a>
+    <a href="healthcare.html"> <button >Healthcare</button></a>
+       <a href="surgeries.html">  <button >Surgeries</button></a>
+       <a href="healthBlog.html"> <button >Health Blog</button></a>
+       <a href="plus.html"><button >Plus</button></a>
+       <a href="offer.html"> <button >Offers</button></a>
+       <a href="valueStore.html">  <button>Value Store</button></a>
+           
+       </div>
+       <hr >
+
+<!-- **********************product details************************************************* -->
+<div id="parent">
+  <div id="monu-parent">
+    <div id="mainImage">
+     
+    </div>
+
+
+    <div id="pAngle">
+    
+    </div>
+   
+  </div>
+
+
+  <div id="productDetails">
+    <div id="leftside">
+      <h2 id="tittlem"></h2>
+      <p id="storem"></p>
+   <div id="ratings">  
+     <img src="https://community.powerbi.com/t5/image/serverpage/image-id/145064i2749B322A77AD36C/image-dimensions/433x143?v=v2" alt="">
+      <p>(380 ratings)</p>
+    </div>
+    <h2>₹<span id="price"></span></h2>
+    <h2>₹<span id="finalprice"></span></h2>
+    <p></p>
+
+    <div id="deliverBy"><p>Delivery by</p> <h4>28 Apr-29 Apr</h4></div>
+    
+
+    </div>
+    <h3>Select available variant</h3>
+    <h5>Pack Size</h5>
+    <div id="packsize">
+
+    <p id="60ml">60 ml</p>
+    <p id="125ml">125 ml</p>
+
+    </div>
+  </div>
+
+    <div id="rightside">
+    
+    </div>
+ <div id="viewcart">
+    <p>Please add item(s) to proceed</p>
+    <a href="cart.html" ><button>  <h3>View cart > </h3></button></a>
+  </div>
+</div>
+
+<!-- *********************bottom section**************************************************** -->
+
+
+
+
+<div id="bottomSection"> 
+  <div id="bottom">
+   <div>
+  <h3>Company</h3>
+  <p>About Us
+  </p>
+  <p>Careers</p>
+  <p>Blog
+  </p>
+  <p>Partner with PharmEasy</p>
+  <p>Sell at PharmEasy
+  </p>
+  <br />
+  <h3>Our Services
+  </h3>
+  <p>Order Medicine
+  </p>
+  <p>Healthcare Products
+  </p>
+  <p>Lab Tests
+  </p>
+  <p>Find Nearest Collection Centre</p>
+   </div>
+  
+   <div>
+    <h3>Featured Categories</h3>
+    <p>Most Loved Brands
+    </p>
+    <p>Mega Clearance Sale
+    </p>
+    <p>Personal Care
+    </p>
+    <p>Healthcare Devices
+    </p>
+    <p>Health Food and Drinks
+    </p>
+    <p>Home Care
+    </p>
+    <p>Mother and Baby Care
+    </p>
+    <p>Diabetic Care
+    </p>
+    <p>Fitness Supplements
+    </p>
+    <p>Skin Care
+    </p>
+    <p>Sexual Wellness
+    </p>
+    <p>Accessories & Wearables
+    </p>
+    <p>Health Condition
+    </p>
+    <p>Ayurvedic Care
+    </p>
+    <p>Elderly Care
+    </p>
+    <p>Top Products</p>
+  
+   </div>
+   <div>
+    <h3>Need Help</h3>
+    <p>Browse All Medicines
+    </p>
+    <p>Browse All Molecules
+    </p>
+    <p>Browse All Cities
+    </p>
+    <p>Browse All Areas
+    </p>
+    <p>Browse All Stores
+    </p>
+    <p>FAQs
+    </p>
+    <p>Policy Info
+    </p>
+    <p>Editorial Policy
+    </p>
+    <p>Privacy Policy
+    </p>
+    <p>Vulnerability Disclosure Policy
+    </p>
+    <p>Terms and Conditions
+    </p>
+    <p>Customer Support Policy
+    </p>
+    <p>Return Policy</p>
+  
+   </div>
+   <div>
+    <h3>Follow us on</h3>
+    <div id="social_media">
+  
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-twitter"></i>
+    </div>
+   </div>
+  </div>
+  
+  <div>
+    <h3>Our Payment Partners</h3>
+    <div id="payment_partners">
+      <img src="https://assets.pharmeasy.in/apothecary/images/gpay.png?dim=1440x0">
+      <img src="https://assets.pharmeasy.in/apothecary/images/paytm.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/phonepe.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/amazon.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/mobikwik.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/olamoney.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/maestro.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/mastercard.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/visa.png?dim=1440x0" alt="">
+      <img src="https://assets.pharmeasy.in/apothecary/images/rupay.png?dim=1440x0" alt="">
+    </div>
+  </div>
+  </div>
+</body>
+</html>
+<script src="./product-detail.js"></script>
+<!-- <script>
+    
+
+document.getElementById("deliver").addEventListener("click",fun);
+
+var addresses="";
+//  console.log(addresses)
+function fun(){
+ addresses= prompt("Please Enter your address");
+ localStorage.setItem("location",JSON.stringify(addresses));
+   // document.querySelector("h4").textContent= "";
+   document.getElementById("EnterAddress").textContent= addresses; 
+
+   // document.getElementById("express").textContent= "Deliver to ";
+
+}
+document.getElementById("EnterAddress").textContent= addresses; 
+// document.querySelector("h4").textContent= "";
+
+// document.querySelector("h4").textContent= "";
+
+
+
+var kk="";
+kk=JSON.parse(localStorage.getItem("location"));
+// console.log(kk); 
+document.getElementById("EnterAddress").textContent= kk;
+ // document.getElementById("cart").addEventListener("click",mycart);
+
+// document.getElementById("login").addEventListener("click", findUser);
+
+// function findUser(){
+
+//  var userName="kuntal"
+var adBM=JSON.parse(localStorage.getItem("userName"));
+
+// } 
+user();
+
+function user(){
+
+document.getElementById("login").innerText=adBM; 
+// console.log(adBM);
+
+}
+
+
+
+
+document.getElementById("button").addEventListener("click",searchP);
+function searchP(input){
+ var input=document.getElementById("inputP").value;
+
+ console.log(input);
+ localStorage.setItem("serachProduct",input);
+ if(input==="dettol"){
+   window.location.href = "dettol.html"
+
+
+ }
+ else
+ {
+   alert("Plese enter item name");
+
+ }
+}
+
+document.getElementById("price").textContent="36.59";
+ document.getElementById("60ml").addEventListener("click",xtrasmall);
+
+document.getElementById("125ml").addEventListener("click", small);
+
+ document.getElementById("250ml").addEventListener("click",medium);
+
+document.getElementById("550ml").addEventListener("click",large)
+
+document.getElementById("1000ml").addEventListener("click",xtraLarge)
+
+function xtrasmall(){
+  document.getElementById("price").textContent="36.59";
+
+
+}
+function small(){
+  document.getElementById("price").textContent="73.2";
+
+
+}function medium(){
+  document.getElementById("price").textContent="127.77";
+
+
+}function large(){
+  document.getElementById("price").textContent="214.06";
+
+
+}
+function xtraLarge(){
+  document.getElementById("price").textContent="336.5";
+
+
+}
+document.getElementById("addToCart").addEventListener("click",addToCart);
+function addToCart(){
+  alert("Product added to cart")
+  
+}
+
+</script> -->

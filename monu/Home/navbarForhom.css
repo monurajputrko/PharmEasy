@@ -23,7 +23,7 @@
 }
 #nav1>a>img{
     height: 50px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 #search{
     display: flex;
@@ -102,9 +102,18 @@
     background-color:  rgb(144, 182, 182); */
   /* }  */
 
+  .search-input>input{
+    height:100%;
+    width:60%;
+    background-color: rgb(255, 255, 255);
+    border:0px;
+}
+
 .search-input{
     border: 2px solid #10847e;
     border-radius: 10%;
+    /* width: 1%;
+    height: auto; */
 }
 .wrapper{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -122,7 +131,7 @@
     position:absolute;
     top: 65px;
     position: fixed;
-    z-index: 100;
+    z-index: 10;
 
 }
 
@@ -134,13 +143,61 @@
     color: #10847e;
     font-size: 118%;
 }
+#logmm{
+    /* margin-left: 1%; */
+    padding-left: 1%;
+}
+/* 
+#menpng{
+    width: 25%;
+    display: inline;
+    padding: 10px;
+}
+
+#menp{
+    display: inline;
+    padding-bottom: 10px;
+    text-align: center;
+} */
+
+#offerp{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#logcart{
+    /* margin: 1%; */
+    padding-left: -0.5%;
+}
+
+#logoffer{
+    padding: 0.7%;
+}
+
 #fororder{
     width: 500px;
     display: flex;
     justify-content: space-around;
-    margin-left: 177px;
-    color: #10847e;
+    align-items: center;
+    margin-left: 31%;
+    color: #000000;
+    /* margin-right: 1%; */
 }
+#fororder>p{
+    /* width: 1%; */
+    padding-left: 13%;
+}
+
+#offerpng{
+    width: 25%;
+}
+a>p{
+    margin-left: 1px;
+}
+.mmgin{
+    margin-right: 15px;
+}
+
 #fororder>p>a{
     text-decoration: none;
     color: #10847e;
@@ -150,8 +207,9 @@
     width: 300px;
     display: flex;
     justify-content: space-around;
-    margin-left:25%;
+    margin-left:0%;
     color: #10847e;
+    /* z-index: 300; */
 }
 #mybtn:hover{
    cursor: pointer;
@@ -196,6 +254,7 @@
 
 .modal-header{
 background-color: #10847e;
+margin-bottom: 10%;
 
 }
 .modal-header>img{
@@ -1569,7 +1628,15 @@ a{
     z-index: 2;
     border-radius: 6px;
   }
-  
+  .modal-content{
+    margin-top: 6%;
+  }
+  .modal-content3{
+    margin-top: 6%;
+  }
+  .modal-content2{
+    margin-top: 6%;
+  }
   .pre-btn ,.pb{
     left: 0;
     transform: rotate(180deg);
@@ -1699,4 +1766,90 @@ a{
   #rights>p {
     font-size: 17px;
     color: #4f585e;
+  }
+
+
+  /* Search Function */
+
+  .wrapper{
+    /* max-width: 450px;
+    height: 45px;
+    width: 500px;
+    margin:  auto;
+    border: none;
+    background-color: blue;
+    resize: none;
+    outline: none; */
+    width: 500px;
+    /* border: 1px solid rgb(29, 33, 161) */
+    /* background-color: rgb(206, 13, 13); */
+  }
+  
+.wrapper .search-input{
+   transform-origin: 100%;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    
+}
+  
+.search-input input{
+    height: 50px;
+    width: 100%;
+    outline: none;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    border: 0;
+}
+  
+  .search-input.active input{
+    border-radius: 0;
+  }
+  
+  .search-input .autocom-box{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    /* overflow-y: auto; */
+  }
+  
+  .search-input.active .autocom-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+    /* border: 1px solid black; */
+  }
+  
+  .autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+  }
+  
+  .search-input.active .autocom-box li{
+    display: block;
+    background:   #f6f8f9;
+  }
+  .autocom-box li:hover{
+    cursor: pointer;
+  }
+  
+  .search-input .icon{
+    position: absolute;
+    right: -40px;
+    top: 0px;
+    height: 45px;
+    width: 35px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
   }
