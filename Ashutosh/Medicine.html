@@ -41,6 +41,12 @@
         button:hover{
             transform: scale(1.1);
         }
+        button:active{
+            color:aliceblue;
+            background-color: black;
+        
+        }
+       
     </style>
 </head>
 <body>
@@ -128,6 +134,9 @@
 
             var button = document.createElement("button");
             button.textContent = elem.btn;
+            div.addEventListener("click",function(){
+                displayInfo(elem);
+            })
 
             priceBox.append(price,finalPrice);
 
@@ -136,4 +145,19 @@
 
         })
     }
+
+    var products = JSON.parse(localStorage.getItem("productInfo")) || [];
+
+    function displayInfo(productArray){
+        products.push(productArray)
+        localStorage.setItem("productInfo",JSON.stringify(products));
+        link.setAttribute("href",productDetails.html);   
+    }
+
+
+
+
+
+
+
 </script>
