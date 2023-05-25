@@ -5,9 +5,234 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart page</title>
+    <style>
+        body{
+            background-color: #E3E7E8;
+            font-family:system-ui ;
+
+        }
+        .container{
+            width: 1000px;
+            margin: auto;
+            transition: 0.5s;
+        }
+        header{
+            display: grid;
+            grid-template-columns: 1fr 50px ;
+            margin-top: 50px;
+        }
+        header  .shoping {
+            position: relative;
+            text-align: center;
+
+        }
+        header .shoping img{
+            width:40px ;
+        }
+        header .shoping span {
+            background-color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff ;
+            position: absolute;
+            top: -5px;
+            left: 80%;
+            padding: 3px 10px;
+
+        }
+        .list{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+             row-gap: 20px;
+             margin-top: 50px;
+        }
+        .list img{
+            width: 100%;
+            
+        }
+        .list h3{
+            text-align: center;
+
+        }
+        .button {
+            text-align: center;
+        }
+        .card{
+            position: fixed;
+            top: 0;
+            left: 100%;
+            width: 500px;
+            background-color: #453e28;
+            height: 100vh;
+            transition: 0.5s;
+        }
+        .card h1{
+            color: #e88c0e;
+            font-weight: 100;
+            margin: 0;
+            padding: 0 20px;
+            height: 80px ;
+            display: flex;
+            align-items: center;
+        }
+        .card.chechout{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        .card.chechout div{
+            background-color: #e88c0e;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .card.chechout div{
+          background-color: #453e28;
+          color: #fff;  
+
+        }
+        .active .card{
+            left: calc(100% - 450px) ;
+        }
+        .active .container{
+            transform: translateX(-200px);
+            
+        }
+
+    </style>
 </head>
 <body>
-    welcome to cart 
-    proceed to chechout
+    <div class="container">
+        <header>
+            <h1>Your Shoping Cart</h1>
+            <div class="shoping">
+                <img src="data:image/png;base64,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" alt="cart">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+        <div class="list">
+            <div>
+                <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" alt="">
+                <h3>prod 1</h3>
+                <button class="button">add to cart</button>
+
+
+            </div >
+            <div>
+                <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" alt="">
+                <h3>prod 1</h3>
+                <button class="button">add to cart</button>
+
+
+            </div>
+            <div>
+                <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" alt="">
+                <h3>prod 1</h3>
+                <button class="button">add to cart</button>
+
+
+            </div>
+            <div>
+                <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" alt="">
+                <h3>prod 1</h3>
+                <button class="button">add to cart</button>
+
+
+            </div>
+            <div>
+                <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" alt="">
+                <h3>prod 1</h3>
+                <button class="button">add to cart</button>
+
+                
+
+
+            </div>
+            <div>
+                <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" alt="">
+                <h3>prod 1</h3>
+                <button class="button">add to cart</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="listcard"></ul>
+        <div class="chechout">
+            <div class="taotal">0</div>
+            <div class="closeshoping">close</div>
+            <div class="listItems">
+                <!-- <img src="https://cdn01.pharmeasy.in/dam/products_otc/196228/sebamed-clear-face-care-gel-50ml-ph-55-acne-prone-skin-hyaluron-aloe-vera-water-based-moisturiser-1-1671741146.jpg" alt="img1"> -->
+                <!-- <h3>care gel 50ml</h3>
+
+                <p>452.20/-</p> -->
+
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
+
+<script>
+    var openShoping = document.querySelector(".shoping");
+    var closeShoping = document.querySelector("closeshoping");
+    var list = document.querySelector(".list");
+    var listcard = document.querySelector(".listcard");
+    var body = document.querySelector("body");
+    var taotal = document.querySelector(".total");
+    var quantity = document.querySelector(".quantity");
+
+    openShoping.addEventListener("click", ()=>{
+        body.classList.add("active");
+    })
+    closeShoping.addEventListener("click", () =>{
+        body.classList.remove("active");
+    })
+    // var products = [
+    //     {
+    //         id : 1,
+    //         name :"PRODUCT NAME 1",
+    //         image : "1. PNG",
+    //         price : 100000
+    //     },
+
+    //     {
+    //         id : 2,
+    //         name :"PRODUCT NAME 1",
+    //         image : "1. PNG",
+    //         price : 100000
+    //     },
+    //     {
+    //         id : 3,
+    //         name :"PRODUCT NAME 1",
+    //         image : "1. PNG",
+    //         price : 100000
+    //     }
+        
+    // ];
+    // var lisrCard = [];
+    // function initApp(){
+    //     products.forEach((value, key) =>{
+    //         var newDiv = document.createElement("div");
+    //         newDiv.innerHTML = "";
+    //         <img src="image/${value}.image" />
+    //     })
+
+
+    // }
+    // initApp();
+
+
+</script>

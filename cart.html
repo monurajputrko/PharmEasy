@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="logo">
+                My shoping<span>cart</span>
+            </div>
+            <ul>
+                <li class="active"><i class="fa-solid fa-house-user"></i> Home</li>
+                <li><i class="fa-regular fa-user"></i> User</li>
+                <li><i class="fa-solid fa-heart"></i> Favourite</li>
+            </ul>
+            
+        </div>
+        <div class="center">
+            <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </div>
+            <div class="list">
+                <div class="item" data-key="1">
+                    <div class="img">
+                        <img src="https://cdn01.pharmeasy.in/dam/products_otc/263100/venusia-max-intensive-moisturizing-lotion-repairs-dry-skin-provides-soft-smooth-skin-300gm-2-1671740865.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product name 1</div>
+                        <div class="des">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                             Labore animi voluptatum, odio sed libero ipsa?
+                        </div>
+                        <div class="price">$20.03</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
