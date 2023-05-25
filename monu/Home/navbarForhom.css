@@ -28,7 +28,7 @@
 #search{
     display: flex;
     height: 50px;
-    width:800px;
+    width:690px;
     margin: 20px;
     border: none;
     outline: none;
@@ -211,7 +211,7 @@ a>p{
     width: 300px;
     display: flex;
     justify-content: space-around;
-    margin-left:1%;
+    margin-left:5%;
     color: #10847e;
     /* z-index: 300; */
 }

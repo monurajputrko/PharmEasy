@@ -11,6 +11,145 @@
     <link rel="stylesheet" href="navbarForhom.css">
     <!-- <link rel="stylesheet" href="searchfunctionality.css"> -->
     <!-- <link rel="stylesheet" href="u4m.css"> -->
+    <style>
+   #myDiv {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  border: 2px solid #10847e;
+  background-color: #10847e;
+  padding: 10px;
+  border-radius: 25px;
+
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes slideAndFade {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 50%;
+  }
+}
+
+#createacc {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  border: 2px solid #10847e;
+  background-color: #10847e;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.createacc {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes slideAndFade {
+  0% {
+    top:  0;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+#logsu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  border: 2px solid #10847e;
+  background-color: #10847e;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.logsu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes slideAndFade {
+  0% {
+    top:  0;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+#notfound {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  border: 2px solid #10847e;
+  background-color: #10847e;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.notfound {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes slideAndFade {
+  0% {
+    top:  0;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+
+    </style>
 </head>
 <body>
 
@@ -40,22 +179,20 @@
                 <img style="width: 150px; display: inline;" src="/PharmEasy/monu/Home/images/download.png" alt="">
                  <div id="forlogsin">
              </a>
-             <!-- <a  id="myBtn"   href="" >                   
-               <p id="menp"> <img id="menpng" src="/PharmEasy/monu/Home/images/men.png" alt="">&nbsp;&nbsp;&nbsp;Hello <span>Login</span></p>
-             </a> -->
+            
              <button id="myBtn"  class="mmgin" style="background-color: white; color: #000000;" >SignUp </button>
              <button id="myBtn3" class="mmgin" style="color: #000000;">LogIn</button>
-             <p id="usernamedata" class="mmgin" style="color: #000000;"></p>
+             <p id="usernamedata" class="mmgin" style="color: #000000; margin-right: 15px;"></p>
              <button id="myBtn5" class="mmgin" style="color: #000000;">LogOut</button>
-             <!-- <a  id="logoffer" href="" >                   
-               <p><img id="offerpng" src="/PharmEasy/monu/Home/images/offer1.png" alt="">&nbsp;&nbsp;&nbsp;Offers</p> 
-             </a> -->
-             <p id="mmgin" style="margin-left: -45px; color: rgb(0, 0, 0);"><a style="color: #000000;" href=""><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">Offers</a></p>
+            
+           
+                        <p id="mmgin" style="margin-right: 25px; color: rgb(0, 0, 0);"><a style="color: #000000;" href=""><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">Offers</a></p>
 
              <a  id="logcart" href="" >                   
-                <p ><a href="" id="cartbtn"><img style="width: 30px; font-size: 4%;" src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt=""></a></p>
+                <p ><a href="" id="cartbtn"><img style="width: 30px; font-size: 4%; margin-right: 100px;" src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt=""></a></p>
              </a>
-            
+          
+
             </div> 
         </div>
         <div id="nav2">
@@ -123,8 +260,8 @@
                  
                     <div id="inpcontinue3">
                      
-                      <input id="mob3" type="number" placeholder="Mobile Number"> <br>
-                      <input id="pass3" type="password" placeholder="Enter Password"> <br>
+                      <input id="mob3" required type="number" placeholder="Mobile Number"> <br>
+                      <input id="pass3" required type="password" placeholder="Enter Password"> <br>
                       <input type="submit" value="Login">
                       <p>By clicking Continue,you agree with our Privacy Policy</p>
                     </div>
@@ -199,7 +336,13 @@
       </div>
     
         <div id="rightside">
-       
+    
+          <div id="myDiv" class="hide">Product Added Successfully</div>
+          <div id="createacc" class="createacc"> Account Created</div>
+          <div id="logsu" class="logsu"> Log In Successfull</div>
+          <div id="notfound" class="notfound"> User Not Found<br>Please Create An Account</div>
+          <!-- <div id="logsu" class="logsu"> Please Create An Account</div> -->
+
         </div>
      <div id="viewcart">
         <p>Please add item(s) to proceed</p>
@@ -404,15 +547,18 @@ var signupdata={
 var data=JSON.parse(localStorage.getItem("usersignupdata"));
 // console.log(signupdata)
 localStorage.setItem("usersignupdata" , JSON.stringify(signupdata))
-alert("Account Created")
-window.location.reload()
+
+var myDiv = document.getElementById("createacc");
+  myDiv.classList.remove("createacc");
+  myDiv.style.animation = "slideAndFade 4s forwards";
+
+  setTimeout(function() {
+    myDiv.style.visibility = "hidden";
+  }, 4000);
 
 })
 var userDataString = localStorage.getItem("usersignupdata");
 var userData = JSON.parse(userDataString);
-// console.log(userData.username);
-// var usernamemonu = JSON.parse(data);
-// console.log(data);
 var deleteButton = document.getElementById("myBtn5");
 
 deleteButton.addEventListener("click", function() {
@@ -420,15 +566,10 @@ deleteButton.addEventListener("click", function() {
   location.reload();
 //   console.log("Local storage cleared!");
 });
+var myBtn5 = document.getElementById("myBtn5");
+    myBtn5.style.display = "none";
 
-if(userData){
-    document.getElementById("myBtn").textContent="";
-    document.getElementById("myBtn3").textContent="";
-    document.getElementById("usernamedata").textContent=userData.username;
-}else{
-    var myBtn5 = document.getElementById("myBtn5");
-  myBtn5.style.display = "none";
-}
+
 
 // login javascript functioning
 
@@ -438,26 +579,41 @@ var form1=document.querySelector("#form1");
 form1.addEventListener("submit" , function(){
   event.preventDefault();
 
-  var logindata={
-    usermobile:form1.mob3.value,
-    userpassword:form1.pass3.value,
-  }
-  console.log(logindata)
-
+  
+  var mobim=document.getElementById("mob3").value;
+  var passm=document.getElementById("pass3").value;
+  var data=JSON.parse(localStorage.getItem("usersignupdata"));
+  console.log(mobim,passm);
+  console.log(data.usermobile);
   if(data==null)
   {
     alert("Please Create an Account");
-  }
-  else if(data.usermobile==logindata.usermobile && data.userpassword==logindata.userpassword)
-  {
-    alert("Login Successful");
-    localStorage.setItem("userlogindata" , JSON.stringify(data));
-    window.location.reload()
+   
+  }else  if(data.usermobile!=mobim && data.userpassword!=passm){
+    var myDiacc = document.getElementById("notfound");
+  myDiacc.classList.remove("notfound");
+  myDiacc.style.animation = "slideAndFade 4s forwards";
 
-  }
-  else{
-    alert("User Do Not Exist")
-    window.location.reload()
+  setTimeout(function() {
+    myDiacc.style.visibility = "hidden";
+  }, 4000);
+    // window.location.reload()
+  } else if(data.usermobile==mobim && data.userpassword==passm){
+    
+    document.getElementById("myBtn").textContent="";
+    document.getElementById("myBtn3").textContent="";
+    document.getElementById("usernamedata").textContent=data.username;
+    var myBtn5 = document.getElementById("myBtn5");
+  myBtn5.style.display = "block";
+  myBtn5.textContent ="LogOut";
+  var myDim = document.getElementById("logsu");
+  myDim.classList.remove("logsu");
+  myDim.style.animation = "slideAndFade 4s forwards";
+
+  setTimeout(function() {
+    myDim.style.visibility = "hidden";
+  }, 4000);
+
   }
 })
 
@@ -466,98 +622,7 @@ var logindata=JSON.parse(localStorage.getItem("userlogindata"));
 var user=document.querySelector("#forlogsin");
 if(logindata!==null)
 {
-  user.innerHTML=
-  `<style>
-              #forlogsin{
-                margin-top:10px;
-                z-index:2;
-                // background-color: white;
-                margin-right:100px;
-
-              }
-            #forlogsin ul{
-                list-style:none;
-                font-size:20px
-            }
-            #forlogsin ul li{
-                margin-bottom:30px;
-                width:30px; 
-                color:white;
-                // margin-top:5px;
-                
-        }
-            #forlogsin ul ul{
-            display:none;
-            width:180px;
-            height:auto;
-            // border:1px solid black;
-            background-color: white;
-           box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-            border-radius:10px;
-            position:absolute;;
-            top:30px;
-            right:90px;
-            // margin-top:20px;  
-            padding:10px;
-            font-family: Open Sans,sans-serif!important;
-            font-weight:600;
-           
-        }
-
-      
-        #forlogsin ul li:hover>ul{
-            display:block;  
-        }
-        #forlogsin ul li:hover>ul li a{
-            text-decoration:none;
-            color: #4f585e;
-       }
-     
-       #forlogsin p+img{
-         height:25px;
-
-       }
-       #hi{
-         display:flex;
-         text-decoration:none;
-         color:white;
-         margin-right:20px;
-
-       }
-       #forcart{
-           margin-right:20px;
-       }
-      
-            </style>`
-        + 
-        `<div id="forlogsin">
-          <p><a href=""><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">Offers</a></p>
-          <div style="width:20px;"></div>
-            <ul >
-                <li><a id="hi" href=""><img src="https://assets.pharmeasy.in/web-assets/dist/5eb42971.svg" alt="">User</a>
-                    <ul>
-                        <li><a href="#">My&nbspOrders</a></li>
-
-                        <li><a href="#">My&nbspRefills</a></li>
-
-                        <li><a href="#">Medical&nbspRecords</a></li>
-
-                        <li><a href="#">My&nbspProfile</a></li>
-
-                        <li><a href="#">Wallet</a></li>
-
-                        <li><a href="#">Refer&Earn</a></li>
-
-                        <li><a href="#">Notification</a></li>
-
-                        <li><a href="#">LogOut</a></li>
-                    </ul>
-                    </li>
-                    
-            </ul>
-            <div style="width:50px;"></div>
-            <p id="forcart"><a href="" ><img src="https://assets.pharmeasy.in/web-assets/dist/21b0b5ba.svg" alt="">cart</a></p>
-    </div>`
+  
 }
 
 
