@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding: 0;
+    font-family: Open Sans,sans-serif!important;
 }
 /* #mainnav{
     position: fixed;
@@ -9,6 +10,13 @@
 #signup-logout{
     cursor: pointer;
 }
+
+#searmonu:hover{
+   background-color: #086963;
+   font-weight: 900;
+   cursor: pointer;
+}
+
 #nav1{
     height: 65px;
     width: 100%;
@@ -67,12 +75,21 @@
     border:0px;
 }
 #search>button{
-    height:100%;
-    width:50px;
-    background-color: rgb(210, 244, 232);
-    border: 0px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    height:80%;
+    width:100px;
+    color: white;
+    background-color: #10847e;
+    border: 2px solid #10847e;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 25px;
+  margin-left: 100px;
+  margin-top: 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 14px;
     
 }
 #search>button>img{
@@ -82,26 +99,18 @@
 #vl{
     height: 60%;
     width: 1.5px;
-    background-color: gray;
+    background-color: rgb(0, 0, 0);
+    margin-left: 30px;
+    margin-right: 15px;
+    font-size: 1px;
 }
+
 
 #Download > img{
     width: 157px;
     border-radius: 10px;
   }
-  /* #Download button{
-    background-color: none;
   
-  border: none  ;
-  }
-  #Download:hover{
-    background-color: rgb(144, 182, 182);
-  
-  }
-  #Download button:hover{
-    background-color:  rgb(144, 182, 182); */
-  /* }  */
-
   .search-input>input{
     height:100%;
     width:60%;
@@ -110,7 +119,7 @@
 }
 
 .search-input{
-    border: 2px solid #10847e;
+    border: 2px solid #ffffff;
     border-radius: 10%;
     /* width: 1%;
     height: auto; */
@@ -124,8 +133,9 @@
     display: flex;
     
     align-items: center;
-    
-    margin-bottom: 100px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    /* margin-bottom: 100px; */
     
     width: 100%;
     position:absolute;
@@ -134,6 +144,7 @@
     z-index: 10;
 
 }
+
 
 #usernamedata{
     font-size: 118%;
@@ -147,18 +158,7 @@
     /* margin-left: 1%; */
     padding-left: 1%;
 }
-/* 
-#menpng{
-    width: 25%;
-    display: inline;
-    padding: 10px;
-}
 
-#menp{
-    display: inline;
-    padding-bottom: 10px;
-    text-align: center;
-} */
 
 #offerp{
   margin-top: 10px;
@@ -198,13 +198,17 @@ a>p{
     margin-right: 15px;
 }
 
+#mmgin:hover{
+    font-weight: 700;
+}
+
 #forlogsin > button{
    margin-left: 10px;
 }
 
 #fororder>p>a{
     text-decoration: none;
-    color: #10847e;
+    color: #000000;
     font-family: Open Sans,sans-serif!important;
 }
 #forlogsin{
@@ -222,22 +226,32 @@ a>p{
     width: 1%;
 }
 
-#myBtn{
-    background-color: white;
-    color: #10847e;
-}
+
+#myBtn:hover{
+    cursor: pointer;
+    font-weight: 700;
+ }
+ #myBtn3:hover{
+     cursor: pointer;
+     font-weight: 700;
+  }
+  #myBtn5:hover{
+     cursor: pointer;
+     font-weight: 700;
+  }
 
 #forlogsin>p>a{
     text-decoration: none;
-    color: #10847e;
+    color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Open Sans,sans-serif!important;
 }
-#nav2 p:hover{
-    text-decoration: underline;
-    text-underline-position: under;
+
+#fororder a:hover{
+   color: #10847e;
+   font-weight: 700;
 }
 
 
@@ -593,7 +607,7 @@ to {opacity: 1}
 #services{
     display: grid;
     grid-template-columns: repeat(8,1fr);
-    padding-left: 6%;
+    padding-left: 9%;
     padding-right: 6%;
     text-align: center;
     gap: 10px;
@@ -611,6 +625,7 @@ to {opacity: 1}
     color: red;
   }
   #services>div h3{
+    color: #000;
 margin-top: 0px;
 
 }
@@ -708,7 +723,8 @@ figure>img{
 
 #slide figure img{
     float:left;
-    width:16.5% ;
+    width:5.5%;
+    margin: 10px;
 }
 @keyframes slide{
     0%{
@@ -1775,31 +1791,17 @@ a{
 
   /* Search Function */
 
-  .wrapper{
-    /* max-width: 450px;
-    height: 45px;
-    width: 500px;
-    margin:  auto;
-    border: none;
-    background-color: blue;
-    resize: none;
-    outline: none; */
-    width: 500px;
-    /* border: 1px solid rgb(29, 33, 161) */
-    /* background-color: rgb(206, 13, 13); */
-  }
   
 .wrapper .search-input{
    transform-origin: 100%;
     width: 100%;
-    border-radius: 5px;
     position: relative;
     
 }
   
 .search-input input{
     height: 50px;
-    width: 100%;
+    width: 120%;
     outline: none;
     /* border: 1px solid black; */
     overflow: hidden;
@@ -1847,8 +1849,8 @@ a{
   
   .search-input .icon{
     position: absolute;
-    right: -40px;
-    top: 0px;
+    right: 200px;
+    top: 6px;
     height: 45px;
     width: 35px;
     text-align: center;
@@ -1857,41 +1859,20 @@ a{
     color: #000;
     cursor: pointer;
   }
-
-
-  .wrapper{
-    /* max-width: 450px;
-    height: 45px;
-    width: 500px;
-    margin:  auto;
-    border: none;
-    background-color: blue;
-    resize: none;
-    outline: none; */
-    width: 500px;
-    /* border: 1px solid rgb(29, 33, 161) */
-    /* background-color: rgb(206, 13, 13); */
+  .icon>img{
+    width: 100%;
   }
+
+
+
   
 .wrapper .search-input{
    transform-origin: 100%;
     width: 100%;
-    border-radius: 5px;
     position: relative;
     
 }
-  
-.search-input input{
-    height: 50px;
-    width: 100%;
-    outline: none;
-    /* border: 1px solid black; */
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    font-size: 16px;
-    border: 0;
-}
+
   
   .search-input.active input{
     border-radius: 0;
@@ -1929,15 +1910,141 @@ a{
     cursor: pointer;
   }
   
-  .search-input .icon{
-    position: absolute;
-    right: -40px;
-    top: 0px;
-    height: 45px;
-    width: 35px;
-    text-align: center;
-    line-height: 45px;
-    font-size: 16px;
-    color: #000;
-    cursor: pointer;
-  }
+
+  
+  #myDiv {
+ position: fixed;
+ bottom: 0;
+ left: 50%;
+ transform: translateX(-50%);
+ background-color: #333;
+ color: #fff;
+ padding: 20px;
+ opacity: 1;
+ transition: opacity 0.5s ease;
+ border: 2px solid #10847e;
+ background-color: #10847e;
+ padding: 10px;
+ border-radius: 25px;
+
+}
+
+.hide {
+ opacity: 0;
+ visibility: hidden;
+}
+
+@keyframes slideAndFade {
+ 0% {
+   bottom: 0;
+ }
+ 50% {
+   bottom: 50%;
+ }
+ 100% {
+   opacity: 0;
+   bottom: 50%;
+ }
+}
+
+#createacc {
+ position: fixed;
+ top: 0;
+ left: 50%;
+ transform: translateX(-50%);
+ background-color: #333;
+ color: #fff;
+ padding: 20px;
+ opacity: 1;
+ transition: opacity 0.5s ease;
+ border: 2px solid #10847e;
+ background-color: #10847e;
+ padding: 10px;
+ border-radius: 25px;
+}
+
+.createacc {
+ opacity: 0;
+ visibility: hidden;
+}
+
+@keyframes slideAndFade {
+ 0% {
+   top:  0;
+ }
+ 50% {
+   top: 50%;
+ }
+ 100% {
+   opacity: 0;
+   top: 0;
+ }
+}
+
+#logsu {
+ position: fixed;
+ top: 0;
+ left: 50%;
+ transform: translateX(-50%);
+ background-color: #333;
+ color: #fff;
+ padding: 20px;
+ opacity: 1;
+ transition: opacity 0.5s ease;
+ border: 2px solid #10847e;
+ background-color: #10847e;
+ padding: 10px;
+ border-radius: 25px;
+}
+
+.logsu {
+ opacity: 0;
+ visibility: hidden;
+}
+
+@keyframes slideAndFade {
+ 0% {
+   top:  0;
+ }
+ 50% {
+   top: 50%;
+ }
+ 100% {
+   opacity: 0;
+   top: 0;
+ }
+}
+
+#notfound {
+ position: fixed;
+ top: 0;
+ left: 50%;
+ transform: translateX(-50%);
+ background-color: #333;
+ color: #fff;
+ padding: 20px;
+ opacity: 1;
+ transition: opacity 0.5s ease;
+ border: 2px solid #10847e;
+ background-color: #10847e;
+ padding: 10px;
+ border-radius: 25px;
+}
+
+.notfound {
+ opacity: 0;
+ visibility: hidden;
+}
+
+@keyframes slideAndFade {
+ 0% {
+   top:  0;
+ }
+ 50% {
+   top: 50%;
+ }
+ 100% {
+   opacity: 0;
+   top: 0;
+ }
+}
