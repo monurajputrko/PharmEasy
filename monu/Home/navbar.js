@@ -61,7 +61,20 @@ var passm3=document.getElementById("pass3").value;
 //   console.log(data.usermobile);
   if(mobmonu==null)
   {
-    alert("Please Create an Account");
+    // alert("Please Create an Account");
+    var myDiv = document.getElementById("myDiv");
+    myDiv.textContent="Please Create an Account";
+    var cloneDiv = myDiv.cloneNode(true);
+  
+    myDiv.parentNode.replaceChild(cloneDiv, myDiv);
+    cloneDiv.classList.remove("hide");
+  
+    // Start animation
+    cloneDiv.style.animation = "slideAndFade 5s forwards";
+  
+    setTimeout(function() {
+      cloneDiv.style.visibility = "hidden";
+    }, 4000);
    
   }else if(mobmonu==mobm3 && passmonu==passm3){
     console.log("Login Success");
@@ -172,3 +185,17 @@ btn3.onclick = function() {
 
 
 
+  window.onload = function() {
+    var namemonu=localStorage.getItem("namemonu");
+    //  console.log(namemonu);
+    if(namemonu!=null){
+        console.log("Login Success");
+        document.getElementById("myBtn").textContent="";
+        document.getElementById("myBtn3").textContent="";
+        document.getElementById("usernamedata").textContent=namemonu;
+        var myBtn5 = document.getElementById("myBtn5");
+      myBtn5.style.display = "block";
+      myBtn5.textContent ="LogOut";
+      }
+
+  };

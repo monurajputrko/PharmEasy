@@ -120,7 +120,8 @@ margin-top: 10px;
     border-radius: 8px;
     border: none;
     color: white;
-    background-color:#9da7a7;
+    background-color: #10847e;
+    padding-bottom: 10px;
 
 
 }
@@ -547,11 +548,7 @@ margin-left: -50px;
   padding-left: 80px;
 
 }
-#viewcart button{
 
-  width: 70%;
-
-}
 #addToCart{
   margin-left: 15%;
 

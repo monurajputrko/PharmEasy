@@ -1913,62 +1913,64 @@ a{
 
   
   #myDiv {
- position: fixed;
- bottom: 0;
- left: 50%;
- transform: translateX(-50%);
- background-color: #333;
- color: #fff;
- padding: 20px;
- opacity: 1;
- transition: opacity 0.5s ease;
- border: 2px solid #10847e;
- background-color: #10847e;
- padding: 10px;
- border-radius: 25px;
-
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    border: 2px solid #10847e;
+    background-color: #10847e;
+    padding: 10px;
+    border-radius: 25px;
+   
 }
 
 .hide {
- opacity: 0;
- visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
-
+/* 
 @keyframes slideAndFade {
- 0% {
-   bottom: 0;
- }
- 50% {
-   bottom: 50%;
- }
- 100% {
-   opacity: 0;
-   bottom: 50%;
- }
-}
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 50%;
+  }
+} */
 
+ 
 #createacc {
- position: fixed;
- top: 0;
- left: 50%;
- transform: translateX(-50%);
- background-color: #333;
- color: #fff;
- padding: 20px;
- opacity: 1;
- transition: opacity 0.5s ease;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
  border: 2px solid #10847e;
  background-color: #10847e;
  padding: 10px;
  border-radius: 25px;
-}
+
+} 
 
 .createacc {
  opacity: 0;
  visibility: hidden;
 }
 
-@keyframes slideAndFade {
+/* @keyframes slideAndFade {
  0% {
    top:  0;
  }
@@ -1979,18 +1981,18 @@ a{
    opacity: 0;
    top: 0;
  }
-}
+} */
 
 #logsu {
- position: fixed;
- top: 0;
- left: 50%;
- transform: translateX(-50%);
- background-color: #333;
- color: #fff;
- padding: 20px;
- opacity: 1;
- transition: opacity 0.5s ease;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
  border: 2px solid #10847e;
  background-color: #10847e;
  padding: 10px;
@@ -2001,7 +2003,7 @@ a{
  opacity: 0;
  visibility: hidden;
 }
-
+/* 
 @keyframes slideAndFade {
  0% {
    top:  0;
@@ -2013,18 +2015,18 @@ a{
    opacity: 0;
    top: 0;
  }
-}
+} */
 
 #notfound {
- position: fixed;
- top: 0;
- left: 50%;
- transform: translateX(-50%);
- background-color: #333;
- color: #fff;
- padding: 20px;
- opacity: 1;
- transition: opacity 0.5s ease;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
  border: 2px solid #10847e;
  background-color: #10847e;
  padding: 10px;
@@ -2036,7 +2038,7 @@ a{
  visibility: hidden;
 }
 
-@keyframes slideAndFade {
+/* @keyframes slideAndFade {
  0% {
    top:  0;
  }
@@ -2047,4 +2049,18 @@ a{
    opacity: 0;
    top: 0;
  }
-}
+}  */
+
+@keyframes slideAndFade {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: 50%;
+    }
+    100% {
+      opacity: 0;
+      top: 50%;
+    }
+  }
+  
