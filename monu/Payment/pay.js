@@ -40,11 +40,13 @@ function generateOTP() {
              }, 4000);
         } 
         if(enterotp!=otpforpay){
-          var warningMessage = document.getElementById('warningMessage');
-          warningMessage.textContent = 'Incorrect OTP! Please try again.';
-          
-
-        }
+          var imageElement = document.getElementById("imageElement");
+          imageElement.src = "../Home/images/otp1.png";
+          setTimeout(function() {
+            var imageElement = document.getElementById("imageElement");
+            imageElement.src = "";
+          }, 1000);
+       }
      });
     
 
