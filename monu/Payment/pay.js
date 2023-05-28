@@ -25,7 +25,7 @@ function generateOTP() {
         var enterotp=document.getElementById("enterotp").value;
         console.log(otpforpay+" "+enterotp);
         if(enterotp==otpforpay){
-          warningMessage.textContent = '';
+          // warningMessage.textContent = '';
           var myDive = document.getElementById("psuccess");
             event.stopPropagation();
             myDiv.classList.remove("visible");

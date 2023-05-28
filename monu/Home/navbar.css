@@ -1929,10 +1929,15 @@ a{
    
 }
 
-.hide {
+.animate {
+    animation-name: slide;
+    animation-duration: 2s;
+  }
+
+/* .hide {
   opacity: 0;
   visibility: hidden;
-}
+} */
 /* 
 @keyframes slideAndFade {
   0% {

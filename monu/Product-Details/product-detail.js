@@ -30,6 +30,7 @@ function displayproduct(){
         img3.setAttribute("src",el.img3);
         
 
+        var packsize ="30ml";
         // var desc = document.createElement("p");
         // desc.textContent = el.desc;
        
@@ -37,35 +38,90 @@ function displayproduct(){
         name.textContent = el.name;
         var price = document.getElementById("price");
         price.textContent ='₹'+ el.price;
+         // Get a reference to the button element
+ const myButton = document.getElementById('60mlbutton');
+  
+ // Add event listener to the button
+ myButton.addEventListener('click', myFunction);
+function myFunction() {
+    // Add your code here
+    // var upprice=price*2;
+     packsize="60 ml";
+    // localStorage.setItem("packsize", packsizem);
+    document.getElementById("price").textContent='₹'+Math.floor(el.price*2)
+    document.getElementById("finalprice").textContent =Math.floor(el.finalPrice*1.5);
+    console.log('Button clicked!');
+  }
+  const myButton2 = document.getElementById('125mlbutton');
+  
+  // Add event listener to the button
+  myButton2.addEventListener('click', myFunction2);
+ function myFunction2() {
+     // Add your code here
+     // var upprice=price*2;
+      packsize="125 ml";
+    // localStorage.setItem("packsize", packsizem);
+     document.getElementById("price").textContent='₹'+Math.floor(el.price*3.5)
+     document.getElementById("finalprice").textContent =Math.floor(el.finalPrice*2.5);
+     console.log('Button clicked!');
+   }
+   const myButton3 = document.getElementById('30mlbutton');
+  
+  // Add event listener to the button
+  myButton3.addEventListener('click', myFunction3);
+ function myFunction3() {
+     // Add your code here
+     // var upprice=price*2;
+      packsize="30 ml";
+    // localStorage.setItem("packsize", packsizem);
+     document.getElementById("price").textContent='₹'+Math.floor(el.price)
+     document.getElementById("finalprice").textContent =Math.floor(el.finalPrice);
+     console.log('Button clicked!');
+   }
+   const myButton4 = document.getElementById('200mlbutton');
+  
+  // Add event listener to the button
+  myButton4.addEventListener('click', myFunction4);
+ function myFunction4() {
+     // Add your code here
+     // var upprice=price*2;
+      packsize="200 ml";
+    // localStorage.setItem("packsize", packsizem);
+     document.getElementById("price").textContent='₹'+Math.floor(el.price*6)
+     document.getElementById("finalprice").textContent =Math.floor(el.finalPrice*4);
+     console.log('Button clicked!');
+   }
         var finalprice = document.getElementById("finalprice");
         finalprice.textContent = el.finalPrice;
         var btn = document.createElement("button");
         btn.textContent = "Add To Cart";
         btn.setAttribute("id","cartbtnpage");
         btn.addEventListener("click",function(){
-            addToCart(el);
-            btn.innerHTML = "Added &#9989;";
+            if(check(el.name)===false){
+                addToCart(el,packsize);
+                // localStorage.setItem("packsizem", packsize);
+                btn.innerHTML = "Added &#9989;";
+                console.log("alredy not added")
+            }else{
+                btn.innerHTML = "Added &#9989;";
+               console.log("alredy added");
+               var myDiv = document.getElementById("myDiv");
+               myDiv.textContent="Already Added";
+               var cloneDiv = myDiv.cloneNode(true);
+             
+               myDiv.parentNode.replaceChild(cloneDiv, myDiv);
+            //    cloneDiv.classList.remove("hide");
+            myDiv.classList.toggle("animate");
+             
+               // Start animation
+               cloneDiv.style.animation = "slideAndFade 5s forwards";
+             
+               setTimeout(function() {
+                 cloneDiv.style.visibility = "animate";
+               }, 1000);
+            //    location.reload();
+            }
         })
-        // var star1=document.createElement("img");
-        // star1.setAttribute("id", "star");
-        // star1.setAttribute("src", "https://cdn.iconscout.com/icon/premium/png-512-thumb/stars-2521068-2114319.png?f=avif&w=256");
-        
-        // var star2=document.createElement("img");
-        // star2.setAttribute("id", "star");
-        // star2.setAttribute("src", "https://cdn.iconscout.com/icon/premium/png-512-thumb/stars-2521068-2114319.png?f=avif&w=256");
-
-        // var star3=document.createElement("img");
-        // star3.setAttribute("id", "star");
-        // star3.setAttribute("src", "https://cdn.iconscout.com/icon/premium/png-512-thumb/stars-2521068-2114319.png?f=avif&w=256");
-
-        // var star4=document.createElement("img");
-        // star4.setAttribute("id", "star");
-        // star4.setAttribute("src", "https://cdn.iconscout.com/icon/premium/png-512-thumb/stars-2521068-2114319.png?f=avif&w=256");
-
-        // var star5=document.createElement("img");
-        // star5.setAttribute("id", "star");
-        // star5.setAttribute("src", "https://cdn.iconscout.com/icon/premium/png-512-thumb/stars-2521068-2114319.png?f=avif&w=256");
-
        
         div1.append(img);
 
@@ -87,40 +143,43 @@ function displayproduct(){
     
 }
 
-// function changefun(product){
-//     var selected = document.getElementById("size_select").value;
-//     product["selected"] = selected;
-//     console.log(selected);
-// }
-// function toggleDiv() {
-//     var myDiv = document.getElementById("myDiv");
-    
-//     myDiv.style.display = "block";
-    
-//     setTimeout(function() {
-//       myDiv.style.display = "none";
-//     }, 3000);
-//   }
+
+  
+ 
   
 
 var cart_data = JSON.parse(localStorage.getItem("cartProduct"))||[];
-function addToCart(product){
-    cart_data.push(product);
+function addToCart(product,packsize){
+    cart_data.push(product,packsize);
     localStorage.setItem("cartProduct",JSON.stringify(cart_data));
 
     var myDiv = document.getElementById("myDiv");
+    // myDiv.textContent="Already Added";
     var cloneDiv = myDiv.cloneNode(true);
   
     myDiv.parentNode.replaceChild(cloneDiv, myDiv);
-    cloneDiv.classList.remove("hide");
+ //    cloneDiv.classList.remove("hide");
+ myDiv.classList.toggle("animate");
   
     // Start animation
     cloneDiv.style.animation = "slideAndFade 5s forwards";
   
     setTimeout(function() {
-      cloneDiv.style.visibility = "hidden";
-    }, 4000);
+      cloneDiv.style.visibility = "animate";
+    }, 1000);
     
+}
+  
+
+function check(name){
+    let checkCart = cart_data.filter(function(elem){
+        return name === elem.name
+    })
+    if(checkCart.length>0){
+        return true;
+    }else{
+        return false;
+    }
 }
 
     // var myDiv = document.getElementById("myDiv");
