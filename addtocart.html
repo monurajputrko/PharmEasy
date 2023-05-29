@@ -7,11 +7,11 @@
     <title>Cart page</title>
     <style>
         body{
-            background-color: #E3E7E8;
+            /* background-color: #E3E7E8; */
             font-family:system-ui ;
-
+            margin: 0;
         }
-        .container{
+        /* .container{
             width: 1000px;
             margin: auto;
             transition: 0.5s;
@@ -107,12 +107,76 @@
         .active .container{
             transform: translateX(-200px);
             
+        } */
+
+        #parent{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            margin: 40px auto;
         }
 
+        #left{
+            width: 65%;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        #left > div:nth-child(1){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #cartList > div{
+            display: flex;
+        }
+        #cartList > div > div:nth-child(1){
+            width: 9%;
+            margin: auto;
+        }
+        #cartList > div > div:nth-child(1) > img{
+            width: 100%;
+        }
+
+        #cartList > div > div:nth-child(2){
+            width: 80%;
+        }
+
+        .box{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .box_r{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #right{
+            width: 35%;
+            border: 1px solid black;
+            padding: 20px;
+        }
+        #right > div:nth-child(2){
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #right > div:nth-child(2) > input{
+            padding: 6px;
+            border-radius: 5px;
+        }
+
+        #right > div:nth-child(2) > button{
+            padding: 6px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <header>
             <h1>Your Shoping Cart</h1>
             <div class="shoping">
@@ -143,7 +207,7 @@
 
             </div>
             <div>
-                <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" alt="">
+                <img src=https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp alt="">
                 <h3>prod 1</h3>
                 <button class="button">add to cart</button>
 
@@ -173,66 +237,123 @@
             <div class="taotal">0</div>
             <div class="closeshoping">close</div>
             <div class="listItems">
-                <!-- <img src="https://cdn01.pharmeasy.in/dam/products_otc/196228/sebamed-clear-face-care-gel-50ml-ph-55-acne-prone-skin-hyaluron-aloe-vera-water-based-moisturiser-1-1671741146.jpg" alt="img1"> -->
-                <!-- <h3>care gel 50ml</h3>
 
-                <p>452.20/-</p> -->
 
             </div>
 
+        </div>
+    </div> -->
+    <div id="parent">
+        <div id="left">
+            <div>
+                <p><span id="count">0</span> Item in your Cart</p>
+                <p>Save for Later</p>
+            </div>
+            <div id="cartList"></div>
+        </div>
+        <div id="right">
+            <div>
+                <p>Cart total: <span id="totalprice">0</span></p>
+            </div>
+            <div>
+                <input type="text" id="applypromo" placeholder="Apply Coupons">
+                <button>Add Delivery Address</button>
+            </div>
+
+            <div>
+                <p>Bill Summary</p>
+                <div class="box_r">
+                    <p>Total MRP :</p>
+                    <p id="totalprice">0</p>
+                </div>
+
+                <div class="box_r">
+                    <p>Cart Value: </p>
+                    <p id="totalprice">0</p>
+                </div>
+
+                <div class="box_r">
+                    <h4>Amount to be paid: </h4>
+                    <h4 id="totalprice">0</h4>
+                </div>
+                
+            </div>
         </div>
     </div>
 </body>
 </html>
 
 <script>
-    var openShoping = document.querySelector(".shoping");
-    var closeShoping = document.querySelector("closeshoping");
-    var list = document.querySelector(".list");
-    var listcard = document.querySelector(".listcard");
-    var body = document.querySelector("body");
-    var taotal = document.querySelector(".total");
-    var quantity = document.querySelector(".quantity");
 
-    openShoping.addEventListener("click", ()=>{
-        body.classList.add("active");
-    })
-    closeShoping.addEventListener("click", () =>{
-        body.classList.remove("active");
-    })
-    // var products = [
-    //     {
-    //         id : 1,
-    //         name :"PRODUCT NAME 1",
-    //         image : "1. PNG",
-    //         price : 100000
-    //     },
+    var cart = JSON.parse(localStorage.getItem("cartproducts")) || [];
+    console.log(cart)
+    if (cart.length > 0) {
+      displaycart(cart);
+      countlen(cart);
+    } else {
+      document.getElementById("cartList").textContent = "NO ITEMS ADDED";
+    }
 
-    //     {
-    //         id : 2,
-    //         name :"PRODUCT NAME 1",
-    //         image : "1. PNG",
-    //         price : 100000
-    //     },
-    //     {
-    //         id : 3,
-    //         name :"PRODUCT NAME 1",
-    //         image : "1. PNG",
-    //         price : 100000
-    //     }
-        
-    // ];
-    // var lisrCard = [];
-    // function initApp(){
-    //     products.forEach((value, key) =>{
-    //         var newDiv = document.createElement("div");
-    //         newDiv.innerHTML = "";
-    //         <img src="image/${value}.image" />
-    //     })
+    function  displaycart(cart){
+
+        document.getElementById("cartList").textContent = "";
+
+        cart.map(function(elem, index){
+            let div = document.createElement("div")
+
+            let imgDiv = document.createElement("div")
+            let image = document.createElement("img")
+            image.src = elem.img_url
+            image.alt = elem.name
+            imgDiv.append(image)
+
+            let contentDiv = document.createElement("div")
+
+            let name = document.createElement("h3")
+            name.textContent = elem.name
+
+            let priceBox = document.createElement("div")
+            priceBox.className = "box"
+
+            let strickPrice = document.createElement("p")
+            strickPrice.textContent = "MRP: " + elem.price
+
+            let price = document.createElement("p")
+            price.textContent = "Rs: " + elem.finalPrice
+
+            priceBox.append(strickPrice,price)
+
+            let dilv = document.createElement("p")
+            dilv.textContent = "Delivery by Tomorrow, before 10:00 pm"
+
+            contentDiv.append(name,priceBox, dilv)
+
+            div.append(imgDiv,contentDiv)
+            document.getElementById("cartList").append(div)
+        })
+    }
+
+    function countlen(array) {
+      document.getElementById("count").textContent = array.length;
+    }
 
 
-    // }
-    // initApp();
+    // var openShoping = document.querySelector(".shoping");
+    // var closeShoping = document.querySelector("closeshoping");
+    // var list = document.querySelector(".list");
+    // var listcard = document.querySelector(".listcard");
+    // var body = document.querySelector("body");
+    // var taotal = document.querySelector(".total");
+    // var quantity = document.querySelector(".quantity");
+
+    // openShoping.addEventListener("click", ()=>{
+    //     body.classList.add("active");
+    // })
+    // closeShoping.addEventListener("click", () =>{
+    //     body.classList.remove("active");
+    // })
+
+    
 
 
 </script>
