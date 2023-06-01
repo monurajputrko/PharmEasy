@@ -8,7 +8,7 @@
     <title>Cart page</title>
     <style>
         body {
-            /* background-color: #E3E7E8; */
+            /* background-color: #E3E7E8; */  
             font-family: system-ui;
             margin: 0;
         }
@@ -2775,7 +2775,7 @@
 
 <script>
 
-    var cart = JSON.parse(localStorage.getItem("cartproducts")) || [];
+    var cart = JSON.parse(localStorage.getItem("cartProduct")) || [];
     console.log(cart)
     if (cart.length > 0) {
         displaycart(cart);
@@ -2785,6 +2785,12 @@
     } else {
         document.getElementById("cartList").textContent = "NO ITEMS ADDED";;
     }
+
+    var sum= cart.reduce((acc,elem)=>parseInt(acc)+parseInt(elem.finalPrice),0);
+    var tsum=0;
+    tsum=tsum+sum;
+    // console.log("monu"+tsum);
+    document.getElementById("totalprice").textContent=tsum   
 
     function displaycart(cart) {
 
@@ -2854,7 +2860,7 @@
 
     function deletetask(index) {
         var rem = cart.splice(index, 1);
-        localStorage.setItem("cartproducts", JSON.stringify(cart));
+        localStorage.setItem("cartProduct", JSON.stringify(cart));
         displaycart(cart);
         countlen(cart);
     }
