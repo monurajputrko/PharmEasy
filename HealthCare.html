@@ -46,17 +46,60 @@
             background-color: black;
         
         }
+
+       #sortPrice{
+        background-color: black;
+        border-radius: 10px;
+        color: aliceblue;
+        /* width: 300px; */
+        padding: 15px;
+        /* width: 250px; */
+        font-size: large;
+       }
+
+       #sortName{
+        background-color: black;
+        border-radius: 10px;
+        color: aliceblue;
+        /* width: 300px; */
+        padding: 15px;
+        /* width: 250px; */
+        font-size: large;
+       }
+
+       #sortDiv{
+        display: flex;
+        justify-content:space-evenly;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+       }
+
+       @media only screen and (max-width: 500px) {
+        #parentAshu-1{
+          grid-template-columns: repeat(2,1fr); 
+        }
+       }
+
+
        
     </style>
 </head>
 <body>
+    <div id="sortDiv">
     <select id="sortPrice" onchange="handleSortPrice()">
     <option value="">Sort By Price</option>
-    <option value="lth">Low to High</option>
-    <option value="htl">High to Low</option>
+    <option value="Low to High">Low to High</option>
+    <option value="High to Low">High to Low</option>
     </select>
+
+    <select id="sortName" onchange="handleSortName()">
+    <option value="">Sort By Name</option>
+    <option value="Ascending Order">Ascending Order</option>
+    <option value="Descending Order">Descending Order</option>
+    </select>
+    </div>
     <div id="parentAshu-1"></div>
-    <!-- <img src="../monu/Product-Details/product-detail.html" /> -->
+    <!-- <img src="../PharmEasy/monu/Product-Details/product-detail.html" /> -->
 </body>
 </html>
 
@@ -85,8 +128,8 @@
          finalPrice : 299.5,
          btn : "Add To Cart",
          img1 :"https://cdn01.pharmeasy.in/dam/products_otc/Q79438/liveasy-foods-sugarfree-chyavanposh-900-gms-gives-2x-immunity-boosts-energy-2-1681475689.jpg?dim=100x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/Q79438/liveasy-foods-sugarfree-chyavanposh-900-gms-gives-2x-immunity-boosts-energy-6.1-1681475624.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/Q79438/liveasy-foods-sugarfree-chyavanposh-900-gms-gives-2x-immunity-boosts-energy-6.2-1681475624.jpg?dim=100x0&dpr=1&q=100"
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/Q79438/liveasy-foods-sugarfree-chyavanposh-900-gms-gives-2x-immunity-boosts-energy-2-1681475689.jpg?dim=100x0&dpr=1&q=100"
+         
      },
         { id : 3,
          name : "Baidyanath Nagpur Honey",
@@ -95,8 +138,8 @@
          finalPrice : 330.50,
          btn : "Add To Cart",
          img1 :"https://cdn01.pharmeasy.in/dam/products_otc/X84442/baidyanath-nagpur-honey-natural-immunity-booster-1-kg-2-1671744542.jpg?dim=100x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/X84442/baidyanath-nagpur-honey-natural-immunity-booster-1-kg-6.1-1671744537.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/X84442/baidyanath-nagpur-honey-natural-immunity-booster-1-kg-6.2-1671744545.jpg?dim=100x0&dpr=1&q=100"
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/X84442/baidyanath-nagpur-honey-natural-immunity-booster-1-kg-6.1-1671744537.jpg?dim=100x0&dpr=1&q=100"
+         
      }, 
         { id : 4,
          name : "Neuherbs Apple Cider Vinegar",
@@ -105,8 +148,8 @@
          finalPrice : 299,
          btn : "Add To Cart",
          img1 :"https://cdn01.pharmeasy.in/dam/products_otc/V07060/neuherbs-organic-apple-cider-vinegar-bottle-of-500-ml-2-1654255900.jpg?dim=100x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/V07060/neuherbs-organic-apple-cider-vinegar-bottle-of-500-ml-6.1-1641788910.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/V07060/neuherbs-organic-apple-cider-vinegar-bottle-of-500-ml-6.2-1641788919.jpg?dim=100x0&dpr=1&q=100"
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/V07060/neuherbs-organic-apple-cider-vinegar-bottle-of-500-ml-6.1-1641788910.jpg?dim=100x0&dpr=1&q=100"
+         
      },
         { id : 5,
          name : "Ensure Chocolate Nutrition Drink",
@@ -114,9 +157,9 @@
          price : 800,
          finalPrice : 715,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/R82293/ensure-chocolate-nutrition-drink-refill-of-400-g-2-1664192516.jpg?dim=700x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/R82293/ensure-chocolate-nutrition-drink-refill-of-400-g-2.1-1664192482.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/R82293/ensure-chocolate-nutrition-drink-refill-of-400-g-6.1-1664192528.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/R82293/ensure-chocolate-nutrition-drink-refill-of-400-g-2-1664192516.jpg?dim=100x0&dpr=1&q=100",
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/R82293/ensure-chocolate-nutrition-drink-refill-of-400-g-2.1-1664192482.jpg?dim=100x0&dpr=1&q=100"
+        
      },
         { id : 6,
          name : "Protinex Nutritional Drink",
@@ -124,9 +167,9 @@
          price : 1190,
          finalPrice : 1170,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/I48398/protinex-rich-chocolate-nutrition-drink-refill-of-750-g-2-1678708702.jpg?dim=700x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/I48398/protinex-rich-chocolate-nutrition-drink-refill-of-750-g-6.1-1678708607.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/I48398/protinex-rich-chocolate-nutrition-drink-refill-of-750-g-6.2-1678708576.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/I48398/protinex-nutritional-drink-mix-for-adults-for-everyday-health-with-high-protein-rich-chocolate-750g-2-1685706605.jpg?dim=100x0&dpr=1&q=100",
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/I48398/protinex-rich-chocolate-nutrition-drink-refill-of-750-g-6.1-1678708607.jpg?dim=100x0&dpr=1&q=100"
+         
      },
         { id : 7,
          name : "Nepro Hp Vanilla Toffee Flavour",
@@ -134,7 +177,7 @@
          price : 1115 ,
          finalPrice : 1103.05,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/241592/nepro-hp-vanilla-nutrition-drink-tin-of-400-g-2-1669634977.jpg?dim=700x0&dpr=1&q=100",
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/241592/nepro-hp-vanilla-nutrition-drink-tin-of-400-g-2-1669634977.jpg?dim=100x0&dpr=1&q=100",
          img2 :"https://cdn01.pharmeasy.in/dam/products_otc/241592/nepro-hp-vanilla-nutrition-drink-tin-of-400-g-6.1-1669634975.jpg?dim=100x0&dpr=1&q=100"
      },
         { id : 8,
@@ -144,8 +187,8 @@
          finalPrice : 584,
          btn : "Add To Cart",
          img1 :"https://cdn01.pharmeasy.in/dam/products_otc/O79657/prohance-junior-nutrition-powder-vanilla-400g-2-1671742720.jpg?dim=100x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/O79657/prohance-junior-nutrition-powder-vanilla-400g-6.1-1671742721.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/O79657/prohance-junior-nutrition-powder-vanilla-400g-7-1671742723.jpg?dim=100x0&dpr=1&q=100"
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/O79657/prohance-junior-nutrition-powder-vanilla-400g-6.1-1671742721.jpg?dim=100x0&dpr=1&q=100"
+        
      },
         { id : 9,
          name : "Venusia Max Intensive Moisturizing Cream",
@@ -153,9 +196,9 @@
          price : 554,
          finalPrice : 504,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/180461/venusia-max-intensive-moisturizing-cream-for-dry-to-very-dry-skin-repairs-smoothens-skin-150g-2-1671740862.jpg?dim=700x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/180461/venusia-max-intensive-moisturizing-cream-for-dry-to-very-dry-skin-repairs-smoothens-skin-150g-2-1671740862.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/180461/venusia-max-intensive-moisturizing-cream-for-dry-to-very-dry-skin-repairs-smoothens-skin-150g-6.1-1671740861.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/180461/venusia-max-intensive-moisturizing-cream-for-dry-to-very-dry-skin-repairs-smoothens-skin-150g-2-1671740862.jpg?dim=100x0&dpr=1&q=100",
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/180461/venusia-max-intensive-moisturizing-cream-for-dry-to-very-dry-skin-repairs-smoothens-skin-150g-3-1671740861.jpg?dim=100x0&dpr=1&q=100"
+         
      },
         { id : 10,
          name : "Himalaya Purifying Neem Face Wash",
@@ -163,7 +206,8 @@
          price : 230,
          finalPrice : 205,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/I35289/himalaya-purifying-neem-face-wash-150ml-2-1669710354.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/I35289/himalaya-purifying-neem-face-wash-150ml-2-1669710354.jpg?dim=100x0&dpr=1&q=100",
+         img2 : "https://cdn01.pharmeasy.in/dam/products_otc/I35289/himalaya-purifying-neem-face-wash-150ml-2-1669710354.jpg?dim=100x0&dpr=1&q=100"
      },
         { id : 11,
          name : "Lite Glo Face Wash Tube",
@@ -172,8 +216,8 @@
          finalPrice : 431,
          btn : "Add To Cart",
          img1 :"https://cdn01.pharmeasy.in/dam/products_otc/C84012/lite-glo-face-wash-tube-of-100-ml-2-1654165477.jpg?dim=100x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/C84012/lite-glo-face-wash-tube-of-100-ml-3-1654165469.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/C84012/lite-glo-face-wash-tube-of-100-ml-6.1-1641788540.jpg?dim=100x0&dpr=1&q=100"
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/C84012/lite-glo-face-wash-tube-of-100-ml-3-1654165469.jpg?dim=100x0&dpr=1&q=100"
+        
      },
         { id : 12,
          name : "Tonenglo Face Wash ",
@@ -181,9 +225,9 @@
          price : 338,
          finalPrice : 290,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/255436/tonenglo-face-wash-tube-of-100-g-2-1671740990.jpg?dim=700x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/255436/tonenglo-face-wash-tube-of-100-g-3-1671740989.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/255436/tonenglo-face-wash-tube-of-100-g-7-1671740988.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/255436/tonenglo-face-wash-tube-of-100-g-2-1671740990.jpg?dim=100x0&dpr=1&q=100",
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/255436/tonenglo-face-wash-tube-of-100-g-3-1671740989.jpg?dim=100x0&dpr=1&q=100"
+        
      },
         { id : 13,
          name : "Nivea Soft Light Moisturizer",
@@ -191,9 +235,9 @@
          price : 269,
          finalPrice : 242,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/I40923/nivea-soft-light-moisturizer-of-200-ml-2-1679372250.jpg?dim=700x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/I40923/nivea-soft-light-moisturizer-of-200-ml-3-1679372241.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/I40923/nivea-soft-light-moisturizer-of-200-ml-6.1-1679372247.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/I40923/nivea-soft-light-moisturizer-of-200-ml-2-1679372250.jpg?dim=100x0&dpr=1&q=100",
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/I40923/nivea-soft-light-moisturizer-of-200-ml-3-1679372241.jpg?dim=100x0&dpr=1&q=100"
+         
      },
         { id : 14,
          name : "Nycil Cool Herbal Talcum Powder",
@@ -201,9 +245,9 @@
          price : 145,
          finalPrice : 133.5,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/T84523/nycil-cool-herbal-prickly-heat-talcum-powder-150gm-cool-herbal-50g-free-2-1680170907.jpg?dim=700x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/T84523/nycil-cool-herbal-prickly-heat-talcum-powder-150gm-cool-herbal-50g-free-6.1-1680170825.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/T84523/nycil-cool-herbal-prickly-heat-talcum-powder-150gm-cool-herbal-50g-free-6.2-1680170866.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/T84523/nycil-cool-herbal-prickly-heat-talcum-powder-150gm-cool-herbal-50g-free-2-1680170907.jpg?dim=100x0&dpr=1&q=100",
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/T84523/nycil-cool-herbal-prickly-heat-talcum-powder-150gm-cool-herbal-50g-free-6.1-1680170825.jpg?dim=100x0&dpr=1&q=100"
+         
      },
         { id : 15,
          name : "Veet Pure Hair Removal Cream",
@@ -211,9 +255,9 @@
          price : 90,
          finalPrice : 89,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/M47114/veet-pure-hair-removal-cream-for-women-with-no-ammonia-smell-normal-skin-30g-2-1656923503.jpg?dim=700x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/M47114/veet-pure-hair-removal-cream-for-women-with-no-ammonia-smell-normal-skin-30g-6.1-1656923489.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/M47114/veet-pure-hair-removal-cream-for-women-with-no-ammonia-smell-normal-skin-30g-6.10-1656923363.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/M47114/veet-pure-hair-removal-cream-for-women-with-no-ammonia-smell-normal-skin-30g-2-1656923503.jpg?dim=100x0&dpr=1&q=100",
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/M47114/veet-pure-hair-removal-cream-for-women-with-no-ammonia-smell-normal-skin-30g-6.1-1656923489.jpg?dim=100x0&dpr=1&q=100"
+         
      },
         { id : 16,
          name : "Venusia Moisturizing Lotion",
@@ -221,28 +265,62 @@
          price : 599,
          finalPrice : 557,
          btn : "Add To Cart",
-         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/242434/venusia-moisturizing-lotion-non-comedogenic-bottle-of-200-ml-2-1671740816.jpg?dim=700x0&dpr=1&q=100",
-         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/242434/venusia-moisturizing-lotion-non-comedogenic-bottle-of-200-ml-3-1671740810.jpg?dim=100x0&dpr=1&q=100",
-         img3 :"https://cdn01.pharmeasy.in/dam/products_otc/242434/venusia-moisturizing-lotion-non-comedogenic-bottle-of-200-ml-6.1-1671740818.jpg?dim=100x0&dpr=1&q=100"
+         img1 :"https://cdn01.pharmeasy.in/dam/products_otc/209143/venusia-moisturizing-lotion-100ml-2-1669655213.jpg?dim=100x0&dpr=1&q=100",
+         img2 :"https://cdn01.pharmeasy.in/dam/products_otc/242434/venusia-moisturizing-lotion-non-comedogenic-bottle-of-200-ml-3-1671740810.jpg?dim=100x0&dpr=1&q=100"
+        
      }
     ]
     
     displayProduct(productArray);
-
+    
+    function handleSortName(){
+        var selected = document.getElementById("sortName").value;
+        if(selected === 'Ascending Order'){
+            productArray.sort(function(a,b){
+                if(a.name>b.name){
+                    return 1;
+                }
+                else if(a.name<b.name){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            })
+        }
+        if(selected === 'Descending Order'){
+            productArray.sort(function(a,b){
+                if(a.name>b.name){
+                    return -1;
+                }
+                else if(a.name<b.name){
+                    return 1;
+                }
+                else{
+                    return 0;
+                }
+            })
+        }
+        console.log(productArray);
+        document.getElementById("parentAshu-1").innerHTML="";
+        displayProduct(productArray);
+    }
 
     function handleSortPrice(){
         var selected = document.getElementById("sortPrice").value;
-        console.log(selected);
-        if(selected === 'lth'){
+        // console.log(selected);
+        if(selected === 'Low to High'){
             productArray.sort(function(a,b){
              return a.finalPrice - b.finalPrice;
             });
         }
-        if(selected === 'htl'){
+        if(selected === 'High to Low'){
             productArray.sort(function(a,b){
              return b.finalPrice - a.finalPrice;
             });
         }
+        // console.log(productArray);
+        document.getElementById("parentAshu-1").innerHTML="";
         displayProduct(productArray);
     }
 
@@ -289,7 +367,7 @@
           function navToNextPage(product){
           product_desc.push(product);
           localStorage.setItem("Prodct-Data",JSON.stringify(product_desc));
-          window.location.href="../monu/Product-Details/product-detail.html";
+          window.location.href="../PharmEasy/monu/Product-Details/product-detail.html";
       }
 
     var products = JSON.parse(localStorage.getItem("productInfo")) || [];
