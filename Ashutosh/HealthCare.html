@@ -50,11 +50,24 @@
     </style>
 </head>
 <body>
+    <select id="sortPrice" onchange="handleSortPrice()">
+    <option value="">Sort By Price</option>
+    <option value="lth">Low to High</option>
+    <option value="htl">High to Low</option>
+    </select>
     <div id="parentAshu-1"></div>
+    <!-- <img src="../monu/Product-Details/product-detail.html" /> -->
 </body>
 </html>
 
 <script>
+
+    
+
+
+
+
+
     var productArray = [{
          id : 1,
          name : "Pharmeasy Hot Water Bag",
@@ -215,7 +228,28 @@
     ]
     
     displayProduct(productArray);
-    function displayProduct(){
+
+
+    function handleSortPrice(){
+        var selected = document.getElementById("sortPrice").value;
+        console.log(selected);
+        if(selected === 'lth'){
+            productArray.sort(function(a,b){
+             return a.finalPrice - b.finalPrice;
+            });
+        }
+        if(selected === 'htl'){
+            productArray.sort(function(a,b){
+             return b.finalPrice - a.finalPrice;
+            });
+        }
+        displayProduct(productArray);
+    }
+
+
+
+
+    function displayProduct(productArray){
         productArray.map(function(elem){
             var div = document.createElement("div");
             var image = document.createElement("img");
@@ -235,6 +269,7 @@
 
             var button = document.createElement("button");
             button.textContent = elem.btn;
+
             div.addEventListener("click",function(){
                 displayInfo(elem);
             })
@@ -254,7 +289,7 @@
           function navToNextPage(product){
           product_desc.push(product);
           localStorage.setItem("Prodct-Data",JSON.stringify(product_desc));
-          window.location.href="../monu/Home/product-detail.html";
+          window.location.href="../monu/Product-Details/product-detail.html";
       }
 
     var products = JSON.parse(localStorage.getItem("productInfo")) || [];
