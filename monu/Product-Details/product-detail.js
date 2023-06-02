@@ -149,8 +149,8 @@ function myFunction() {
   
 
 var cart_data = JSON.parse(localStorage.getItem("cartProduct"))||[];
-function addToCart(product,packsize){
-    cart_data.push(product,packsize);
+function addToCart(product){
+    cart_data.push(product);
     localStorage.setItem("cartProduct",JSON.stringify(cart_data));
 
     var myDiv = document.getElementById("myDiv");
