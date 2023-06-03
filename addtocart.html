@@ -2918,7 +2918,17 @@
     }
 
     const decrease= ()=>{
-        let qty = 1
+        // let qty = 1
+        // displaycart(cart);
+        // countlen(cart);
+         //debugger
+         let qty = el.quantity || -1
+        let obj = cart.find((x)=>x.id == el.id)
+        qty+=-1
+        obj['quantity'] = qty;
+        console.log(cart,qty)
+        localStorage.setItem("cartproducts", JSON.stringify(cart));
+        // location.reload();
         displaycart(cart);
         countlen(cart);
         
