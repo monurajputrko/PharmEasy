@@ -2804,7 +2804,6 @@
 
         cart.map(function (elem, index) {
             let div = document.createElement("div")
-
             let imgDiv = document.createElement("div")
             let image = document.createElement("img")
             image.src = elem.img_url
@@ -2820,6 +2819,30 @@
             let name = document.createElement("h3")
             name.textContent = elem.name
 
+            let qtyDiv = document.createElement("div")
+             qtyDiv.style.display = 'flex'
+             qtyDiv.style.gap="10px"
+
+            let plus = document.createElement("p")
+            plus.innerText = "+"
+            plus.addEventListener('click',()=>{
+                add(elem)
+            })
+            qtyDiv.append(plus)
+
+            let qty = document.createElement('p')
+            qty.innerText = elem.quantity ||1
+            qtyDiv.append(qty)
+
+            let minus = document.createElement("p")
+            minus.innerText = '-'
+            minus.addEventListener('click',()=>{
+                decrease(elem)
+            })
+            qtyDiv.append(minus)
+
+            
+
             let del = document.createElement("p");
             del.textContent = "Delete";
 
@@ -2827,7 +2850,7 @@
                 deletetask(index);
             });
 
-            nameDelDiv.append(name, del, )
+            nameDelDiv.append(name,qtyDiv, del, )
 
             let priceBox = document.createElement("div")
             priceBox.className = "pBox"
@@ -2878,6 +2901,27 @@
         location.reload();
         displaycart(cart);
         countlen(cart);
+    }
+
+    const add = (el) =>{
+        //debugger
+        let qty = el.quantity || 1
+        let obj = cart.find((x)=>x.id == el.id)
+        qty+=1
+        obj['quantity'] = qty;
+        console.log(cart,qty)
+        localStorage.setItem("cartproducts", JSON.stringify(cart));
+        // location.reload();
+        displaycart(cart);
+        countlen(cart);
+
+    }
+
+    const decrease= ()=>{
+        let qty = 1
+        displaycart(cart);
+        countlen(cart);
+        
     }
 
 
