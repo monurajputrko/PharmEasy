@@ -155,7 +155,7 @@
             margin: 10px 0;
         }
 
-        .pBox_r {
+        .box_r {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -203,10 +203,6 @@
 
         #logop img {
             width: 15px;
-        }
-        #qty{
-            display: flex;
-            justify-content: center;
         }
 
         * {
@@ -2737,7 +2733,7 @@
                 </div>
 
             </div>
-            <div id="cartList"><span id="qty">0</span></div>
+            <div id="cartList"></div>
         </div>
         <div id="right">
             <div>
@@ -2779,7 +2775,7 @@
 
 <script>
 
-    var cart = JSON.parse(localStorage.getItem("cartproducts")) || [];
+    var cart = JSON.parse(localStorage.getItem("cartProduct")) || [];
     console.log(cart)
     if (cart.length > 0) {
         displaycart(cart);
@@ -2816,7 +2812,6 @@
             let nameDelDiv = document.createElement("div")
             nameDelDiv.setAttribute("id", "nameDel")
 
-
             let name = document.createElement("h3")
             name.textContent = elem.name
 
@@ -2827,7 +2822,7 @@
                 deletetask(index);
             });
 
-            nameDelDiv.append(name, del, )
+            nameDelDiv.append(name, del)
 
             let priceBox = document.createElement("div")
             priceBox.className = "pBox"
@@ -2874,7 +2869,7 @@
 
     function deletetask(index) {
         var rem = cart.splice(index, 1);
-        localStorage.setItem("cartproducts", JSON.stringify(cart));
+        localStorage.setItem("cartProduct", JSON.stringify(cart));
         location.reload();
         displaycart(cart);
         countlen(cart);
