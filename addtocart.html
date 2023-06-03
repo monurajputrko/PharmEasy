@@ -2745,6 +2745,7 @@
             </div>
             <div>
                 <input type="text" id="applypromo" placeholder="Apply Coupons">
+                <button id="" onclick="applypromo()">apply Cuupon</button>
                 <button>Add Delivery Address</button>
             </div>
             <br>
@@ -2778,7 +2779,7 @@
 </html>
 
 <script>
-
+     var isApplied =0
     var cart = JSON.parse(localStorage.getItem("cartproducts")) || [];
     console.log(cart)
     if (cart.length > 0) {
@@ -2796,6 +2797,11 @@
     
     // var MRP  = cart.reduce((acc,elem)=>parseInt(acc)+parseInt(elem.finalPrice),0);
     // console.log(MRP)
+
+    function applypromo() {
+      var promocodeinput = document.getElementById("applypromo").value;
+      calcart(cart,promocodeinput);
+    }
 
 
     function displaycart(cart) {
@@ -2823,7 +2829,7 @@
              qtyDiv.style.display = 'flex'
              qtyDiv.style.gap="10px"
 
-            let plus = document.createElement("p")
+            let plus = document.createElement("button")
             plus.innerText = "+"
             plus.addEventListener('click',()=>{
                 add(elem)
@@ -2834,7 +2840,7 @@
             qty.innerText = elem.quantity ||1
             qtyDiv.append(qty)
 
-            let minus = document.createElement("p")
+            let minus = document.createElement("button")
             minus.innerText = '-'
             minus.addEventListener('click',()=>{
                 decrease(elem)
@@ -2872,10 +2878,15 @@
             document.getElementById("cartList").append(div)
         })
     }
-
-    function calcart(cart) {
+   
+    function calcart(cart,coupon) {
+        
+        if(isApplied == 1){
+            alert(" coupon already applied")
+            return
+        }
         var sum = cart.reduce(function (acc, curel) {
-            return parseInt(acc) + parseInt(curel.finalPrice)
+            return parseInt(acc) + parseInt(curel.total)
         }, 0);
 
         var mrpSum = cart.reduce(function (acc, curel) {
@@ -2884,11 +2895,19 @@
 
         let total = document.getElementById("totalprice")
         total.textContent = sum;
+        if(coupon =='masai30' && isApplied == 0){
+            isApplied++
+            sum = sum -(sum*0.3)
+            alert("coupon applied successfully.")
+        }else if(coupon?.length>0){
+            alert("enter a valid coupon")
+        }
+        console.log(coupon)
         document.getElementById("totalV").textContent = sum
         document.getElementById("totalA").textContent = sum
 
         let mrpTotal = document.getElementById("mrpTotal").textContent = mrpSum
-        console.log(sum)
+        console.log(sum/0.3)
     }
 
     function countlen(array) {
@@ -2909,27 +2928,26 @@
         let obj = cart.find((x)=>x.id == el.id)
         qty+=1
         obj['quantity'] = qty;
+        obj['total'] =  +qty*+obj?.finalPrice
         console.log(cart,qty)
         localStorage.setItem("cartproducts", JSON.stringify(cart));
         // location.reload();
         displaycart(cart);
+        calcart(cart)
         countlen(cart);
 
     }
 
-    const decrease= ()=>{
-        // let qty = 1
-        // displaycart(cart);
-        // countlen(cart);
-         //debugger
-         let qty = el.quantity || -1
+    const decrease= (el)=>{
+         let qty = el.quantity || 1
         let obj = cart.find((x)=>x.id == el.id)
-        qty+=-1
+        qty > 1 ? qty-=1 : qty=qty
         obj['quantity'] = qty;
+        obj['total'] =  +qty*+obj?.finalPrice
         console.log(cart,qty)
         localStorage.setItem("cartproducts", JSON.stringify(cart));
-        // location.reload();
         displaycart(cart);
+        calcart(cart)
         countlen(cart);
         
     }
