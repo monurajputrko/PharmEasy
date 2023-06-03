@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicine</title>
+    <title>Value-Store</title>
     <style>
-        #parentAshu-2{
+        #parentAshu-3{
             display: grid;
             grid-template-columns: repeat(4,1fr);
             gap: 20px;
             margin-top: 100px;
         }
-        #parentAshu-2>div{
+        #parentAshu-3>div{
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             text-align: center;
             border-radius: 10px;
             padding-bottom: 40px;
         }
-        #parentAshu-2>div>img{
+        #parentAshu-3>div>img{
             width: 50%;
             padding-top: 25px;
         }
@@ -34,7 +34,7 @@
             cursor: pointer;
         }
 
-        #parentAshu-2>div:hover{
+        #parentAshu-3>div:hover{
             border: 1px solid rgb(45, 128, 45);
         }
 
@@ -47,7 +47,7 @@
         
         }
 
-        #sortPrice-2{
+        #sortPrice-3{
         background-color: black;
         border-radius: 10px;
         color: aliceblue;
@@ -57,7 +57,7 @@
         font-size: large;
        }
 
-       #sortName-2{
+       #sortName-3{
         background-color: black;
         border-radius: 10px;
         color: aliceblue;
@@ -67,7 +67,7 @@
         font-size: large;
        }
 
-       #sortDiv-2{
+       #sortDiv-3{
         display: flex;
         justify-content:space-evenly;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -75,7 +75,7 @@
        }
 
        @media only screen and (max-width: 500px) {
-        #parentAshu-2{
+        #parentAshu-3{
           grid-template-columns: repeat(2,1fr); 
         }
        }
@@ -83,106 +83,108 @@
     </style>
 </head>
 <body>
-    <div id="sortDiv-2">
-        <select id="sortPrice-2" onchange="handleSortPrice2()">
+    <div id="sortDiv-3">
+        <select id="sortPrice-3" onchange="handleSortPrice3()">
         <option value="">Sort By Price</option>
         <option value="Low to High">Low to High</option>
         <option value="High to Low">High to Low</option>
         </select>
     
-        <select id="sortName-2" onchange="handleSortName2()">
+        <select id="sortName-3" onchange="handleSortName3()">
         <option value="">Sort By Name</option>
         <option value="Ascending Order">Ascending Order</option>
         <option value="Descending Order">Descending Order</option>
         </select>
         </div>
 
-    <div id="parentAshu-2"></div>
+    <div id="parentAshu-3"></div>
     <!-- <a href="../monu/Product-Details/product-detail.html"></a> -->
 </body>
 </html>
 
 <script>
-   var productArray2 = [{
+   var productArray3 = [{
         id : 1,
-        name : "Everherb (by pharmeasy) Ashwagandha",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/P54860/everherb-by-pharmeasy-ashwagandha-immunity-booster-capsules-anxiety-stress-relief-bottle-of-90-2-1681543142.jpg",
-        price : 599,
-        finalPrice : 399.50,
+        name : "Everherb Karela Jamun Juice",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/L79986/everherb-karela-jamun-juice-helps-maintains-healthy-sugar-levels-helps-in-weight-management-1l-2-1680172214.jpg?dim=700x0&dpr=1&q=100",
+        price : 399,
+        finalPrice : 207.50,
         btn : "Add To Cart",
-        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/P54860/everherb-by-pharmeasy-ashwagandha-immunity-booster-capsules-anxiety-stress-relief-bottle-of-90-2-1681543142.jpg?dim=100x0&dpr=1&q=100",
-        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/P54860/everherb-by-pharmeasy-ashwagandha-immunity-booster-capsules-anxiety-stress-relief-bottle-of-90-6.1-1681543106.jpg?dim=100x0&dpr=1&q=100"  
+        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/L79986/everherb-karela-jamun-juice-helps-maintains-healthy-sugar-levels-helps-in-weight-management-1l-2-1680172214.jpg?dim=100x0&dpr=1&q=100",
+        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/L79986/everherb-karela-jamun-juice-helps-maintains-healthy-sugar-levels-helps-in-weight-management-1l-6.1-1680172167.jpg?dim=100x0&dpr=1&q=100"  
     },
     {   id : 2,
-        name : "Everherb (by pharmeasy) Karela",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/B55847/everherb-by-pharmeasy-karela-blood-sugar-control-lowers-bad-cholestrol-bottle-of-60-2-1661760071.jpg",
+        name : "Everherb Diabetic Care Juice",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/V68813/everherb-diabetic-care-juice-11-potent-ingredients-healthy-blood-sugar-management-1-litre-bottle-2-1680238244.jpg?dim=700x0&dpr=1&q=100",
         price : 599,
-        finalPrice : 311.48,
+        finalPrice : 299,
         btn : "Add To Cart",
-        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/B55847/everherb-by-pharmeasy-karela-blood-sugar-control-lowers-bad-cholestrol-bottle-of-60-2-1661760071.jpg?dim=100x0&dpr=1&q=100",
-        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/B55847/everherb-by-pharmeasy-karela-blood-sugar-control-lowers-bad-cholestrol-bottle-of-60-6.1-1661760129.jpg?dim=100x0&dpr=1&q=100"
+        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/V68813/everherb-diabetic-care-juice-11-potent-ingredients-healthy-blood-sugar-management-1-litre-bottle-2-1680238244.jpg?dim=100x0&dpr=1&q=100",
+        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/V68813/everherb-diabetic-care-juice-11-potent-ingredients-healthy-blood-sugar-management-1-litre-bottle-6.1-1680172286.jpg?dim=100x0&dpr=1&q=100"
        
     },
+
     {   id : 3,
-        name : "Everherb (by pharmeasy) Amla",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/T18833/everherb-by-pharmeasy-amla-immunity-booster-capsules-natural-vitamin-c-bottle-of-60-2-1661863079.jpg",
-        price : 299.50,
-        finalPrice : 250.48,
+        name : "Everherb Aloe Vera Juice",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/E54755/everherb-by-pharmeasy-aloe-vera-juice-with-pulp-rejuvenates-skin-hair-1-litre-bottle-2-1680172150.jpg?dim=700x0&dpr=1&q=100",
+        price : 399.50,
+        finalPrice : 199.00,
         btn : "Add To Cart",
-        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/T18833/everherb-by-pharmeasy-amla-immunity-booster-capsules-natural-vitamin-c-bottle-of-60-2-1661863079.jpg?dim=100x0&dpr=1&q=100",
-        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/T18833/everherb-by-pharmeasy-amla-immunity-booster-capsules-natural-vitamin-c-bottle-of-60-6.1-1661863083.jpg?dim=100x0&dpr=1&q=100"
+        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/E54755/everherb-by-pharmeasy-aloe-vera-juice-with-pulp-rejuvenates-skin-hair-1-litre-bottle-2-1680172150.jpg?dim=100x0&dpr=1&q=100",
+        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/E54755/everherb-by-pharmeasy-aloe-vera-juice-with-pulp-rejuvenates-skin-hair-1-litre-bottle-6.1-1680172172.jpg?dim=100x0&dpr=1&q=100"
        
     },
     {   id : 4,
-        name : "Everherb (by pharmeasy) Moringa",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/H62199/everherb-by-pharmeasy-moringa-drum-stick-immunity-booster-capsules-natural-multivitamin-bottle-of-60-2-1661760057.jpg",
-        price : 599,
-        finalPrice : 299.50,
+        name : "Everherb Amla Juice",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/D92359/everherb-by-pharmeasy-amla-juice-rich-in-vitamin-c-natural-immunity-booster-1-litre-bottle-2-1680238204.jpg?dim=700x0&dpr=1&q=100",
+        price : 399,
+        finalPrice : 199.50,
         btn : "Add To Cart",
-        img1 : "https://cdn01.pharmeasy.in/dam/products_otc/H62199/everherb-by-pharmeasy-moringa-drum-stick-immunity-booster-capsules-natural-multivitamin-bottle-of-60-2-1661760057.jpg?dim=100x0&dpr=1&q=100",
-        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/H62199/everherb-by-pharmeasy-moringa-drum-stick-immunity-booster-capsules-natural-multivitamin-bottle-of-60-6.1-1661760088.jpg?dim=100x0&dpr=1&q=100"
+        img1 : "https://cdn01.pharmeasy.in/dam/products_otc/D92359/everherb-by-pharmeasy-amla-juice-rich-in-vitamin-c-natural-immunity-booster-1-litre-bottle-2-1680238204.jpg?dim=100x0&dpr=1&q=100",
+        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/D92359/everherb-by-pharmeasy-amla-juice-rich-in-vitamin-c-natural-immunity-booster-1-litre-bottle-6.1-1680172198.jpg?dim=100x0&dpr=1&q=100"
         
     },
-       {id : 5,
-        name : "Pharmeasy Multivitamin",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/E54733/pharmeasy-multivitamin-gummies-for-kids-and-adults-healthy-growth-immunity-bottle-of-30-2-1671743494.jpg",
-        price : 699,
-        finalPrice : 419.50,
+    {   id : 5,
+        name : "Liveasy Foods Healthy Seed Mix",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/E34104/liveasy-foods-healthy-seed-mix-blend-of-6-fibre-rich-healthy-seeds-2-1656420891.jpg?dim=700x0&dpr=1&q=100",
+        price : 399,
+        finalPrice : 219.50,
         btn : "Add To Cart",
-        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/E54733/pharmeasy-multivitamin-gummies-for-kids-and-adults-healthy-growth-immunity-bottle-of-30-2-1671743494.jpg?dim=100x0&dpr=1&q=100",
-        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/E54733/pharmeasy-multivitamin-gummies-for-kids-and-adults-healthy-growth-immunity-bottle-of-30-6.1-1671743491.jpg?dim=100x0&dpr=1&q=100"
+        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/E34104/liveasy-foods-healthy-seed-mix-blend-of-6-fibre-rich-healthy-seeds-2-1656420891.jpg?dim=100x0&dpr=1&q=100",
+        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/E34104/liveasy-foods-healthy-seed-mix-blend-of-6-fibre-rich-healthy-seeds-3-1656420887.jpg?dim=100x0&dpr=1&q=100"
         
     },
     {   id : 6,
-        name : "Pharmeasy Glutathion",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/G70731/pharmeasy-glutathione-promotes-healthy-skin-reverses-signs-of-ageing-bottle-of-30-2-1671743915.jpg",
-        price : 1399,
-        finalPrice : 769.50,
+        name : "Chau Foods Chia Raw Seeds",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/R93251/jus-amazin-crunchy-seed-butter-mixed-seeds-with-flax-sunflower-seeds-125g85-mixed-seeds-2-1671745281.jpg?dim=700x0&dpr=1&q=100",
+        price : 299,
+        finalPrice : 269.50,
         btn : "Add To Cart",
-        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/G70731/pharmeasy-glutathione-promotes-healthy-skin-reverses-signs-of-ageing-bottle-of-30-2-1671743915.jpg?dim=100x0&dpr=1&q=100",
-        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/G70731/pharmeasy-glutathione-promotes-healthy-skin-reverses-signs-of-ageing-bottle-of-30-2-1671743915.jpg?dim=100x0&dpr=1&q=100"
+        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/R93251/jus-amazin-crunchy-seed-butter-mixed-seeds-with-flax-sunflower-seeds-125g85-mixed-seeds-2-1671745281.jpg?dim=100x0&dpr=1&q=100",
+        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/R93251/jus-amazin-crunchy-seed-butter-mixed-seeds-with-flax-sunflower-seeds-125g85-mixed-seeds-6.1-1671745287.jpg?dim=100x0&dpr=1&q=100"
         
     },
     {   id : 7,
-        name : "Liveasy Bandage",
-        img_url :"https://cdn01.pharmeasy.in/dam/products_otc/Q16893/liveasy-ortho-care-cotton-crepe-bandage-reduces-strain-sprain-swelling-10-cms-x-4-meters-2-1656420284.jpg",
-        price : 225,
-        finalPrice : 199.50,
+        name : "Pharmeasy All-In -One Vaporizer",
+        img_url :"https://cdn01.pharmeasy.in/dam/products_otc/Q83701/pharmeasy-all-in-one-vaporizer-1-1685623949.jpg?dim=700x0&dpr=1&q=100",
+        price : 599,
+        finalPrice : 399.50,
         btn : "Add To Cart",
-        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/Q16893/liveasy-ortho-care-cotton-crepe-bandage-reduces-strain-sprain-swelling-10-cms-x-4-meters-2-1656420284.jpg?dim=100x0&dpr=1&q=100",
-        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/Q16893/liveasy-ortho-care-cotton-crepe-bandage-reduces-strain-sprain-swelling-10-cms-x-4-meters-6.1-1656420286.jpg?dim=100x0&dpr=1&q=100"
+        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/Q83701/pharmeasy-all-in-one-vaporizer-1-1685623949.jpg?dim=100x0&dpr=1&q=100",
+        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/Q83701/pharmeasy-all-in-one-vaporizer-2-1685623943.jpg?dim=100x0&dpr=1&q=100"
         
     },
     {   id : 8,
-        name : "Liveasy Diabetic Protein Powder",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/H14523/liveasy-wellness-diabetic-protein-powder-chocolate-flavour-400g-2-1671742949.jpg",
-        price : 999,
-        finalPrice : 559.50,
+        name : "Liveasy Foods Healthy Seed Mix",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/E34104/liveasy-foods-healthy-seed-mix-blend-of-6-fibre-rich-healthy-seeds-2-1656420891.jpg?dim=700x0&dpr=1&q=100",
+        price : 349,
+        finalPrice : 319.50,
         btn : "Add To Cart",
-        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/H14523/liveasy-wellness-diabetic-protein-powder-chocolate-flavour-400g-2-1671742949.jpg?dim=100x0&dpr=1&q=100",
-        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/H14523/liveasy-wellness-diabetic-protein-powder-chocolate-flavour-400g-6.1-1671742947.jpg?dim=100x0&dpr=1&q=100"
+        img1 :"https://cdn01.pharmeasy.in/dam/products_otc/E34104/liveasy-foods-healthy-seed-mix-blend-of-6-fibre-rich-healthy-seeds-2-1656420891.jpg?dim=100x0&dpr=1&q=100",
+        img2 :"https://cdn01.pharmeasy.in/dam/products_otc/E34104/liveasy-foods-healthy-seed-mix-blend-of-6-fibre-rich-healthy-seeds-3-1656420887.jpg?dim=100x0&dpr=1&q=100"
         
     },
+       
     {   id : 9,
         name : "Everherb (By Pharmeasy)",
         img_url : "https://cdn01.pharmeasy.in/dam/products_otc/K40120/everherb-by-pharmeasy-pain-relief-oil-blend-of-8-powerful-herbal-ingredients-100-ml-2-1681539810.jpg",
@@ -244,33 +246,33 @@
         
     },
     {   id : 15,
-        name : "Revital H Men Multivitamin ",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/281751/revital-h-men-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-60-capsules-2-1671741037.jpg",
-        price : 550.00,
-        finalPrice : 522.00,
+        name : "",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/051260/dabur-chyawanprash-250-gm-2-1669634957.jpg?dim=700x0&dpr=1&q=100",
+        price : 115.00,
+        finalPrice : 113.00,
         btn : "Add To Cart",
-        img1 : "https://cdn01.pharmeasy.in/dam/products_otc/281751/revital-h-men-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-60-capsules-2-1671741037.jpg?dim=100x0&dpr=1&q=100",
-        img2 : "https://cdn01.pharmeasy.in/dam/products_otc/281751/revital-h-men-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-60-capsules-3-1671741032.jpg?dim=100x0&dpr=1&q=100"
+        img1 : "https://cdn01.pharmeasy.in/dam/products_otc/051260/dabur-chyawanprash-250-gm-2-1669634957.jpg?dim=100x0&dpr=1&q=100",
+        img2 : "https://cdn01.pharmeasy.in/dam/products_otc/051260/dabur-chyawanprash-250-gm-3-1669634953.jpg?dim=100x0&dpr=1&q=100"
        
     },
     {   id : 16,
-        name : "Revital H Women Multivitamin",
-        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/I00596/revital-h-women-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-tablets-2-1671741117.jpg?dim=700x0&dpr=1&q=100",
-        price : 360.00,
-        finalPrice : 324.00,
+        name : "Baidyanath Amla Juice",
+        img_url : "https://cdn01.pharmeasy.in/dam/products_otc/276008/baidyanath-amla-juice-immunity-omniprotection-to-virusno-added-sugarorganically-harvested-1l-1-1669634744.jpg?dim=700x0&dpr=1&q=100",
+        price : 250.00,
+        finalPrice : 240.00,
         btn : "Add To Cart",
-        img1 : "https://cdn01.pharmeasy.in/dam/products_otc/I00596/revital-h-women-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-tablets-2-1671741117.jpg?dim=100x0&dpr=1&q=100",
-        img2 : "https://cdn01.pharmeasy.in/dam/products_otc/I00596/revital-h-women-multivitamin-with-calcium-zinc-ginseng-for-immunity-strong-bones-energy-30-tablets-3-1671741118.jpg?dim=100x0&dpr=1&q=100"
+        img1 : "https://cdn01.pharmeasy.in/dam/products_otc/276008/baidyanath-amla-juice-immunity-omniprotection-to-virusno-added-sugarorganically-harvested-1l-1-1669634744.jpg?dim=100x0&dpr=1&q=100",
+        img2 : "https://cdn01.pharmeasy.in/dam/products_otc/276008/baidyanath-amla-juice-immunity-omniprotection-to-virusno-added-sugarorganically-harvested-1l-2-1669634744.jpg?dim=100x0&dpr=1&q=100"
         
     },
 ]
     
-    displayProduct(productArray2);
+    displayProduct(productArray3);
 
-    function handleSortName2(){
-        var selected = document.getElementById("sortName-2").value;
+    function handleSortName3(){
+        var selected = document.getElementById("sortName-3").value;
         if(selected === 'Ascending Order'){
-            productArray2.sort(function(a,b){
+            productArray3.sort(function(a,b){
                 if(a.name>b.name){
                     return 1;
                 }
@@ -283,7 +285,7 @@
             })
         }
         if(selected === 'Descending Order'){
-            productArray2.sort(function(a,b){
+            productArray3.sort(function(a,b){
                 if(a.name>b.name){
                     return -1;
                 }
@@ -295,31 +297,31 @@
                 }
             })
         }
-        console.log(productArray2);
-        document.getElementById("parentAshu-2").innerHTML="";
-        displayProduct(productArray2);
+        console.log(productArray3);
+        document.getElementById("parentAshu-3").innerHTML="";
+        displayProduct(productArray3);
     }
     
-    function handleSortPrice2(){
-        var selected = document.getElementById("sortPrice-2").value;
+    function handleSortPrice3(){
+        var selected = document.getElementById("sortPrice-3").value;
         // console.log(selected);
         if(selected === 'Low to High'){
-            productArray2.sort(function(a,b){
+            productArray3.sort(function(a,b){
              return a.finalPrice - b.finalPrice;
             });
         }
         if(selected === 'High to Low'){
-            productArray2.sort(function(a,b){
+            productArray3.sort(function(a,b){
              return b.finalPrice - a.finalPrice;
             });
         }
         // console.log(productArray);
-        document.getElementById("parentAshu-2").innerHTML="";
-        displayProduct(productArray2);
+        document.getElementById("parentAshu-3").innerHTML="";
+        displayProduct(productArray3);
     }
 
     function displayProduct(){
-        productArray2.map(function(elem){
+        productArray3.map(function(elem){
             var div = document.createElement("div");
             var image = document.createElement("img");
             image.setAttribute("src",elem.img_url);
@@ -348,7 +350,7 @@
             priceBox.append(price,finalPrice);
 
             div.append(image,name,priceBox,button);
-            document.getElementById("parentAshu-2").append(div);
+            document.getElementById("parentAshu-3").append(div);
 
         })
     }
@@ -362,8 +364,8 @@
 
     var products = JSON.parse(localStorage.getItem("productInfo")) || [];
 
-    function displayInfo(productArray2){
-        products.push(productArray2)
+    function displayInfo(productArray3){
+        products.push(productArray3)
         localStorage.setItem("productInfo",JSON.stringify(products));
         link.setAttribute("href",productDetails.html);   
     }
