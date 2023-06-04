@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fb84590649.js" crossorigin="anonymous"></script>
     <title>Cart page</title>
     <style>
         body {
@@ -2733,7 +2734,7 @@
                 <div id="logop">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png"
                         alt="">
-                    <p>Save for Later</p>
+                    <p>Save for Later <span><i class="fa-solid fa-trash-can"></i></span></p>
                 </div>
 
             </div>
@@ -2746,7 +2747,9 @@
             <div>
                 <input type="text" id="applypromo" placeholder="Apply Coupons">
                 <button id="" onclick="applypromo()">apply Cuupon</button>
-                <button>Add Delivery Address</button>
+                <input type="submit" value=" Add Delivery Address  " class="submit-btn" id="id-submit" />
+
+                <!-- <button id="nextPAge">Add Delivery Address</button> -->
             </div>
             <br>
 
@@ -2779,6 +2782,16 @@
 </html>
 
 <script>
+    document.getElementById("id-submit").value;
+    var checkout = document.querySelector("#id-submit");
+   checkout.addEventListener("click", handleCheckout);
+   function handleCheckout(event) {
+      event.preventDefault();
+    
+        window.location.href = "deleviry.html"
+
+   }
+
      var isApplied =0
     var cart = JSON.parse(localStorage.getItem("cartproducts")) || [];
     console.log(cart)
@@ -2850,7 +2863,7 @@
             
 
             let del = document.createElement("p");
-            del.textContent = "Delete";
+            del.textContent ="Delete";
 
             del.addEventListener("click", function () {
                 deletetask(index);

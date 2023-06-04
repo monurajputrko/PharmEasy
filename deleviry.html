@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add address</title>
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all 0.2s linear;
+         }
+
+         .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            min-height: 100vh;
+            /* background: linear-gradient(90deg, #d4f4ea 60%, #a6efca 40.1%); */
+         }
+
+         .container form {
+            padding: 20px;
+            width: 1000px;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+         }
+
+         .container form .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+         }
+
+         .container form .row .col {
+            flex: 1 1 250px;
+         }
+
+         .container form .row .col .title {
+            font-size: 20px;
+            color: #333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+         }
+
+         .container form .row .col .inputBox {
+            margin: 15px 0;
+         }
+
+         .container form .row .col .inputBox span {
+            margin-bottom: 10px;
+            display: block;
+         }
+
+         .container form .row .col .inputBox input {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 15px;
+            text-transform: none;
+         }
+
+         .container form .row .col .inputBox input:focus {
+            border: 1px solid #000;
+         }
+
+         .container form .row .col .flex {
+            display: flex;
+            gap: 15px;
+         }
+
+         .container form .row .col .flex .inputBox {
+            margin-top: 5px;
+         }
+
+         .container form .row .col .inputBox img {
+            height: 34px;
+            margin-top: 5px;
+            filter: drop-shadow(0 0 1px #000);
+         }
+
+         .container form .submit-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+            background: #27ae60;
+            color: #fff;
+            margin-top: 5px;
+            cursor: pointer;
+         }
+
+         .container form .submit-btn:hover {
+            background: #c3d6cb;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+           <div class="row">
+              <div class="col">
+                 <h3 class="title">billing address</h3>
+                 <img src="" alt="">
+
+                 <div class="inputBox">
+                    <span>full name :</span>
+                    <input
+                       type="text"
+                       placeholder="full name"
+                       name="fullName"
+                       onchange="handleChange(this.value,this.name)"
+                    />
+                 </div>
+                 <div class="inputBox">
+                    <span>email :</span>
+                    <input
+                       type="email"
+                       placeholder="example@example.com"
+                       name="email"
+                       onchange="handleChange(this.value,this.name)"
+                    />
+                 </div>
+                 <div class="inputBox">
+                    <span>address :</span>
+                    <input
+                       type="text"
+                       placeholder="room - street - locality"
+                       name="address"
+                       onchange="handleChange(this.value,this.name)"
+                    />
+                 </div>
+                 <div class="inputBox">
+                    <span>city :</span>
+                    <input
+                       type="text"
+                       placeholder="Madanapalli"
+                       name="city"
+                       onchange="handleChange(this.value,this.name)"
+                    />
+                 </div>
+
+                 <div class="flex">
+                    <div class="inputBox">
+                       <div>
+                          <label>State</label>
+                          <select name=" " id="" onchange="onStateChane(this.value)">
+                             <option>Andhra Pradesh</option>
+
+                             <option>Arunachal Pradesh</option>
+                             <option>Assam</option>
+                             <option>Bihar</option>
+                             <option>Chhattisgarh</option>
+                             <option>Goa</option>
+                             <option>Gujarat</option>
+                             <option>Haryana</option>
+                             <option>Himachal Pradesh</option>
+                             <option>Jharkhand</option>
+                             <option>Karnataka</option>
+                             <option>Kerala</option>
+                             <option>Madhya Pradesh</option>
+                             <option>Maharashtra</option>
+                             <option>Manipur</option>
+                             <option>Meghalaya</option>
+                             <option>Mizoram</option>
+                             <option>Nagaland</option>
+                             <option>Odisha</option>
+                             <option>Punjab</option>
+                             <option>Rajasthan</option>
+                             <option>Sikkim</option>
+                             <option>Tamil Nadu</option>
+                             <option>Telangana</option>
+                             <option>Tripura</option>
+                             <option>Uttar Pradesh</option>
+                             <option>Uttarakhand</option>
+                             <option>West Bengal</option>
+                          </select>
+                       </div>
+                       <!-- <input type="text" placeholder="india"> -->
+                    </div>
+                    <div class="inputBox">
+                       <span>zip code :</span>
+                       <input
+                          type="text"
+                          placeholder="123 456"
+                          name="pincode"
+                          onchange="handleChange(this.value,this.name)"
+                       />
+                    </div>
+                 </div>
+              </div>
+
+
+           <input type="submit" value="SUBMIT" class="submit-btn" id="id-submit" />
+        </form>
+     </div>
+</body>
+</html>
+
+<script>
+    let filledData = {
+       fullName: "",
+       email: "",
+       address: "",
+       city: "",
+       state: "Andhra Pradesh",
+       pincode: "",
+    //    paymentMode: "upi",
+    //    nameOnCard: "",
+    //    cardNumber: "",
+    //    expMonth: "",
+    //    expYear: "",
+    //    cvv: "",
+    };
+    var handleChange = (value, name) => {
+       filledData[name] = value;
+    };
+    var onStateChane = (value) => {
+       filledData.state = value;
+    };
+ 
+    var handlePaymentMethod = (value) => {
+       filledData.paymentMode = value;
+    };
+ 
+    var checkout = document.querySelector("#id-submit");
+    checkout.addEventListener("click", handleCheckout);
+ 
+    function handleCheckout(event) {
+       event.preventDefault();
+       let {
+          fullName,
+          email,
+          address,
+          city,
+          state,
+          pincode,
+        //   nameOnCard,
+        //   cardNumber,
+        //   expMonth,
+        //   expYear,
+        //   cvv,
+       } = filledData;
+       if (!fullName) {
+          alert("Full Name is required..!");
+       } else if (!email) {
+          alert("Email is required..!");
+       } else if (!address) {
+          alert("Address is required..!");
+       } else if (!city) {
+          alert("City is required..!");
+       } else if (!pincode) {
+          alert("Zip code is required..!");
+       }
+    // /  } else if (!nameOnCard) {
+    //       alert("Name On Crad is required..!");
+    //    } else if (!cardNumber) {
+    //       alert("Card Number is required..!");
+    //    } else if (cardNumber.length != 16) {
+    //       alert("Enter a valid number which is having 16 number..!");
+    //    } else if ( !expMonth) {
+    //       alert("Expire Month is required..!");
+    //    } else if (!expYear) {
+    //       alert("Enter atleat 3 characters..!");
+    //    } else if (cvv !=123) {
+    //       alert("Cvv is required..!");
+    //    }
+       else{
+         localStorage.setItem("paymentDetails",JSON.stringify(filledData))
+         window.location.href = "addtocart.html"
+       }
+    }
+ var price=JSON.pase(localStorage.getItem("amount"));
+ document.getElementById("id-submit").value+= amount;
+ 
+ 
+ </script>
