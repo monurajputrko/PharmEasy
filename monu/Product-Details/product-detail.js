@@ -16,8 +16,8 @@ function displayproduct(){
         var div4 = document.createElement("div");
         div4.setAttribute("id","div4");
 
-        var div5 = document.createElement("div");
-        div5.setAttribute("id","div5");
+        // var div5 = document.createElement("div");
+        // div5.setAttribute("id","div5");
 
 
         var img1 = document.createElement("img");    
@@ -26,8 +26,8 @@ function displayproduct(){
         var img2 = document.createElement("img");    
         img2.setAttribute("src",el.img2);
 
-        var img3 = document.createElement("img");    
-        img3.setAttribute("src",el.img3);
+        // var img3 = document.createElement("img");    
+        // img3.setAttribute("src",el.img3);
         
 
         var packsize ="30ml";
@@ -129,9 +129,9 @@ function myFunction() {
 
         div3.append(img1);
         div4.append(img2);
-        div5.append(img3);
+        // div5.append(img3);
 
-        document.getElementById("pAngle").append(div3,div4,div5);
+        document.getElementById("pAngle").append(div3,div4);
 
         // document.getElementById("pAngle").append(img1,img2,img3);
 
@@ -148,10 +148,10 @@ function myFunction() {
  
   
 
-var cart_data = JSON.parse(localStorage.getItem("cartProduct"))||[];
+var cart_data = JSON.parse(localStorage.getItem("cartproducts"))||[];
 function addToCart(product){
     cart_data.push(product);
-    localStorage.setItem("cartProduct",JSON.stringify(cart_data));
+    localStorage.setItem("cartproducts",JSON.stringify(cart_data));
 
     var myDiv = document.getElementById("myDiv");
     // myDiv.textContent="Already Added";
@@ -181,6 +181,14 @@ function check(name){
         return false;
     }
 }
+
+
+// window.onbeforeunload = function() {
+//     localStorage.clear();
+//     localStorage.clear('Prodct-Data');
+//     localStorage.clear('productInfo');
+//     localStorage.clear();
+//   };
 
     // var myDiv = document.getElementById("myDiv");
     // myDiv.classList.remove("hide");
