@@ -5,16 +5,10 @@ This project is a clone of the popular online pharmacy platform, Pharmeasy. It a
 ## Features
 
 - User Registration and Login: Users can create an account and log in to access the platform.
-- Medicine Search: Users can search for medicines based on name, category, or other filters.
+- Medicine Search: Users can search for medicines.
 - Medicine Details: Users can view detailed information about each medicine, including its price, dosage, and availability.
 - Add to Cart: Users can add medicines to their shopping cart for easy checkout.
 - Order Placement: Users can place orders for the selected medicines and choose a delivery address.
-- Payment Integration: Integration with a secure payment gateway for seamless online transactions.
-- Order Tracking: Users can track the status of their orders and receive notifications for updates.
-- Prescription Upload: Users can upload their prescriptions for verification and purchase of prescription medicines.
-- Account Management: Users can manage their profile information, addresses, and order history.
-- Notifications: Users receive notifications regarding order updates, promotions, and other important information.
-- Admin Dashboard: An admin panel for managing medicines, orders, users, and other site settings.
 
 ## Technologies Used
 
@@ -39,15 +33,21 @@ To run the Pharmeasy Clone locally, follow these steps:
 Contributions are welcome! If you'd like to contribute to the Pharmeasy Clone project, please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch for your feature or bug fix: `git checkout -b my-new-feature`
+2. Create a new branch for your feature or bug fix: `git checkout -b my-new-feature
 3. Make your changes and commit them: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
+4. Push to the branch: `git push origin my-new-feature
 5. Submit a pull request detailing your changes.
 
 ## License
 
-The Pharmeasy Clone project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT). Feel free to modify and use the code as per the license terms.
+The Pharmeasy Clone project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT). Please feel free to modify and use the code according to the license terms.
 
 ## Acknowledgements
 
-This project was inspired by the original Pharmeasy platform and serves as a learning exercise in web development. Special thanks to the developers and contributors of the
+This project was inspired by the original Pharmeasy platform and serves as a learning exercise in web development. Special thanks to the developers and contributors of the libraries and frameworks used in this project.
+
+## Contributers
+
+1. Monu Singh - Landing Page, Signin/Login Page, Navbar, Footer, Product Description, Payment Pages
+2. Ashutosh - Product Pages and its Functionality
+3. Umamahesh - Cart Page and Cart Page Functionality
