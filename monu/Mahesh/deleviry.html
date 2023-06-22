@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI4AAACOCAMAAADQI8A6AAAAYFBMVEX8/f0PkG0AjmoAjGf//v8AimT1+vnP5+CNxram0sX4/Pzv9/UAiGHr9fPm8/DY6+ZTqpB9u6it1sohl3c9oYS63dNcrpZptJ5IpouZy71yuqXE4NdcqZCEwa8um3xOpIrNB+X9AAAEp0lEQVR4nO2aaZebOgyGgyz2sAVCIFyY//8vC8wEJBIoTm3Snuv3S8/psDxosWwpp5ORkZGRkZGRkZGRkZGR0b8lHPX458MspzC51vcyrdIy85vE+SARYtRklXU+i1H22bb+89wPEeHJbXNbgEUFQhRe8gEgTNpuwfJDBIUXHcyDgZfbr2BGIDv3gyOBMClfWma2UJkcx4NNJzZgBoniehjPJd8yzY+BLD84BAb30Iw8h9jHPy9o4HvdgeV/20fwePy1IKyuvGe9ysJa/ClvNPOgw2mEqLwmDsZ6FUSu9wU0xqHQm18YtPz7q0s0Fc4BKbxU9AK4OVpxPLrcwDmLF1+PGLc25dGY7hjez/RV3fVFcUK8ksSDItZG42TMEd1KoDIeUWsyD4YZdYMo3LUXYWNNPGCdtPBgcGe2Wafp3+/Nl9paoqePG5rCIt9M4bCcLhY3DcUdoxvzVLW9oKBLQkz92tPbhkfxb19RztFzUY2DsZRthjuaCUdkinHQSVlh2IjiSWH3uEWUajcaGJc8w5dL8cubpsiHIlJMw3Iq3RWaeHl8AmwnoSxNVL5TpLGZ71KIg3FKaexyj6dOLNUV4mDINgyi2kmjBweTikVxuvs8h+78GTsScS8N30zttc1Q1m3V1ulpWE6VEmddrOfM2v8Rm090CxbFd6mT95QBUClZdzBhR025yozxtAVTU9L7PR1bb1qph2I93QyeCl8lHYviNpR6aFjMd6vYfwVsJyppmxP6s3FUbN6J73udPUeOJinI/kJBQceERnEmeXNwm7/lrGQRjEjo+JL3OuTkJ1Ili06QTeuGt3awXWkko0csqySQR2+N5gHw1q4IGt9vnkO8Lw/kWHNXdI7AayEARL7mqX7/PPRPnnqAGJEcV7j1wuiS3eu1xz1qvb3cjuGVNhWULIGPJ69PGdB9LASQ89TBC8VpD+kP0loPFeMhR5p3svI9GlpdF/YJ+a5E9SnrBY1b8B5Y3hCnzn78zq3VdUIdzaLJDTltPLH+zhDOmmme28o9D72iWfBoHFA822Z8ZUdXX/QpDyjbu7+isZ5sM75TMH8x+9h3XTDYdC9pBhvQxgkbosCXpmjGK7UNAPcJnYlgM/sUvvQED88ZsGr3tuAh/pq3YHarh4btn0HUfR2t2Hros/WnsLWGMtJu5fd8iPc34ExrwnC+7yU6TZ132gTrPfX9TtbhAKgpT+SlRdFqSnMMZhwA/6d93duHrXk1reHohPrG6jgNAegkD5Mb82F9zMyRNPdBsBhZ+Ms7aqqPdR+a/Qs73ipGh9pnOJUdg3MKLkVvoLJZjD0wYjxKt6RbQnQSN3lxenBYV14cZp+VwxVGLYtn3TPZ3wlPdPZmSx6jNfC4OfFWdVS2r9E4tJqK24dpFjMd5UMjORpeKWyZHqsGmpifrfZ3w7XQJOkbMx19NOxssX9uoYfG5Z6SmBTooImKtyZMmuSkLMN1TM0lhO4fzC004Pj232MbjiMkJwU6cOapnsjkevN69Dh8gafnpzFyGhpz/f5Z2J/31Kjhp7lWXh77o9dNxXH8N4TNQ5//kbuRkZGRkZGRkZGRkZGRkZHR/1K/AMYpMUDaX3j1AAAAAElFTkSuQmCC">
+    <link rel="stylesheet" href="/Final_pharmesy/monu/Home/navbar.css">
+    <title>Add address</title>
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all 0.2s linear;
+         }
+
+         .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            min-height: 100vh;
+            /* background: linear-gradient(90deg, #d4f4ea 60%, #a6efca 40.1%); */
+         }
+
+         .container form {
+            padding: 20px;
+            width: 1000px;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+         }
+
+         .container form .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+         }
+
+         .container form .row .col {
+            flex: 1 1 250px;
+         }
+
+         .container form .row .col .title {
+            font-size: 20px;
+            color: #333;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+         }
+
+         .container form .row .col .inputBox {
+            margin: 15px 0;
+         }
+
+         .container form .row .col .inputBox span {
+            margin-bottom: 10px;
+            display: block;
+         }
+
+         .container form .row .col .inputBox input {
+            width: 100%;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 15px;
+            text-transform: none;
+         }
+
+         .container form .row .col .inputBox input:focus {
+            border: 1px solid #000;
+         }
+
+         .container form .row .col .flex {
+            display: flex;
+            gap: 15px;
+         }
+
+         .container form .row .col .flex .inputBox {
+            margin-top: 5px;
+         }
+
+         .container form .row .col .inputBox img {
+            height: 34px;
+            margin-top: 5px;
+            filter: drop-shadow(0 0 1px #000);
+         }
+
+         .container form .submit-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 17px;
+            background: #27ae60;
+            color: #fff;
+            margin-top: 5px;
+            cursor: pointer;
+         }
+
+         .container form .submit-btn:hover {
+            background: #c3d6cb;
+         }
+    </style>
+</head>
+<body>
+   <header>
+      <nav id="mainnav" class="flex">
+          <div id="nav1">
+              <a href="/index.html"><img src="https://assets.pharmeasy.in/apothecary/images/logo_big.svg?dim=256x0" alt=""></a>
+              
+              <div id="vl">i</div>
+              <div id="search">
+                 <div>
+                     <button id="myBtn2">Select Pincode</button>
+                  
+                 </div>
+                 <div class="wrapper">
+                  <div class="search-input">
+                    <div class="icon"><img src="/Final_pharmesy/monu/Home/images/search.png" alt=""></div>
+                    <input type="text" placeholder=" Search medicines/Healthcare">
+                  </div>
+                </div>
+                 <button id="searmonu" type="submit">Search</button>  
+              </div>
+              <a  id="Download" href="https://apps.apple.com/IN/app/id982432643?mt=8" >                   
+                  <img style="width: 150px; display: inline;" src="/Final_pharmesy/monu/Home/images/download.png" alt="">
+                   <div id="forlogsin">
+               </a>
+              
+               <button id="myBtn"  class="mmgin" style="background-color: white; color: #000000; cursor: pointer;" >SignUp </button>
+               <button id="myBtn3" class="mmgin" style="color: #000000; cursor: pointer;">LogIn</button>
+               <p id="usernamedata" class="mmgin" style="color: #000000; margin-right: 15px;"></p>
+               <button id="myBtn5" class="mmgin" style="color: #000000; cursor: pointer;" >LogOut</button>
+              
+             
+                          <p id="mmgin" style="margin-right: 25px; color: rgb(0, 0, 0);"><a style="color: #000000;" href=""><img src="https://assets.pharmeasy.in/web-assets/dist/275c07e1.svg" alt="">Offers</a></p>
+    
+               <a  id="logcart" href="" >                   
+                  <p ><a href="/Mahesh/addtocart.html" id="cartbtn"><img style="width: 30px; font-size: 4%; margin-right: 100px;" src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png" alt=""></a></p>
+               </a>
+            
+    
+              </div> 
+          </div>
+          <hr>
+          <div id="nav2">
+               <div id="fororder">
+                
+                   <p><a  href="/Ashutosh/Medicine/Medicine (1).html">Medicines</a></p>
+                   <p><a  href="">Lab&nbsp;Tests</a></p>
+                   <p><a  href="/Ashutosh/HealthCare/HealthCare.html">Health&nbsp;care</a></p>
+                   <p><a  href="">Health&nbsp;Blogs</a></p>
+                   <p><a  href="/Ashutosh/Value-store/value-store.html">PLUS</a></p>
+                   <p><a  href="">Offers</a></p>
+                   <p><a  href="/Ashutosh/Value-store/value-store.html">Value&nbsp;Store</a></p>
+                  
+               </div>
+              
+          </div>
+          <hr>
+      </nav>
+    </header>
+    <!-- ---------------------------------------------------Header Ends Here ---------------------------------------------- -->
+    <br><br><br><br>
+      <div id="body">
+         
+      </div>
+      <form id="form">
+      <div id="myModal" class="modal">
+          <div class="modal-content">
+                  <div class="modal-header">
+                      <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+                      <span class="close">&times;</span>
+                  </div>
+                  <div>
+                      <p style="font-weight: 600;     font-family: Open Sans,sans-serif!important; color: gray; margin: 20px;">Quick Login / Register</p>
+                  </div> 
+                    <div id="inpcontinue">
+                      <input id="namemonu" type="text" placeholder="Enter name"> <br>
+                      <input id="mobmonu" type="number" placeholder="Mobile Number"> <br>
+                      <input id="passmonu" type="password" placeholder="Enter Password"> <br>
+                      <input type="submit" value="Sign Up">
+                      <p>By clicking Continue,you agree with our Privacy Policy</p>
+                    </div>  
+          </div>
+       </div>
+      </form>
+      <form id="form1">
+        <div id="myModal3" class="modal3">
+            <div class="modal-content3">
+                    <div class="modal-header3">
+                        <img src="https://assets.pharmeasy.in/web-assets/dist/fca22bc9.png" alt="">
+                        <span class="close3">&times;</span>
+                    </div>
+                    <div>
+                        <p style="font-weight: 600;     font-family: Open Sans,sans-serif!important; color: gray; margin: 20px;">Quick Login / Register</p>
+                    </div> 
+                   
+                   
+                      <div id="inpcontinue3">
+                       
+                        <input id="mob3" required type="number" placeholder="Mobile Number"> <br>
+                        <input id="pass3" required type="password" placeholder="Enter Password"> <br>
+                        <input type="submit" value="Login">
+                        <p>By clicking Continue,you agree with our Privacy Policy</p>
+                      </div>
+            </div>
+         </div>
+        </form>
+    
+       <div id="myModal2" class="modal2">
+          <div class="modal-content2">
+                  <div class="modal-header2">
+                      <span class="close2">&times;</span>
+                  </div>
+                  <div>
+                      <p id="Chooseloc">Choose your <br> Location</p>
+                      <div id="forintbut">
+                          <input type="text">
+                          <button>Check</button>
+                      </div>
+                      <p id="forsaveadd">Save Addresses</p>
+                      <address></address>
+                      <div id="serving"><img src="https://assets.pharmeasy.in/web-assets/dist/90ee736b.svg" alt="">Serving more than 1,000 towns and cities in india.</div>
+                      <div id="Over">Over 30,00,000 orders safely delivered <br> <p>know more</p></div>
+                  </div>
+    
+          </div>
+       </div>
+       <div style="border: 2px;"></div>
+       <div id="myDiv" class="hide">Product Added Successfully</div>
+       <div id="createacc" class="createacc"> Account Created</div>
+       <div id="logsu" class="logsu"> Log In Successfull</div>
+       <div id="notfound" class="notfound"> User Not Found<br>Please Create An Account</div>
+    
+    <div class="container">
+        <form action="">
+           <div class="row">
+              <div class="col">
+                 <h3 class="title">billing address</h3>
+                 <img src="" alt="">
+
+                 <div class="inputBox">
+                    <span>full name :</span>
+                    <input
+                       type="text"
+                       placeholder="full name"
+                       name="fullName"
+                       onchange="handleChange(this.value,this.name)"
+                    />
+                 </div>
+                 <div class="inputBox">
+                    <span>email :</span>
+                    <input
+                       type="email"
+                       placeholder="example@example.com"
+                       name="email"
+                       onchange="handleChange(this.value,this.name)"
+                    />
+                 </div>
+                 <div class="inputBox">
+                    <span>address :</span>
+                    <input
+                       type="text"
+                       placeholder="room - street - locality"
+                       name="address"
+                       onchange="handleChange(this.value,this.name)"
+                    />
+                 </div>
+                 <div class="inputBox">
+                    <span>city :</span>
+                    <input
+                       type="text"
+                       placeholder="Madanapalli"
+                       name="city"
+                       onchange="handleChange(this.value,this.name)"
+                    />
+                 </div>
+
+                 <div class="flex">
+                    <div class="inputBox">
+                       <div>
+                          <label>State</label>
+                          <select name=" " id="" onchange="onStateChane(this.value)">
+                             <option>Andhra Pradesh</option>
+
+                             <option>Arunachal Pradesh</option>
+                             <option>Assam</option>
+                             <option>Bihar</option>
+                             <option>Chhattisgarh</option>
+                             <option>Goa</option>
+                             <option>Gujarat</option>
+                             <option>Haryana</option>
+                             <option>Himachal Pradesh</option>
+                             <option>Jharkhand</option>
+                             <option>Karnataka</option>
+                             <option>Kerala</option>
+                             <option>Madhya Pradesh</option>
+                             <option>Maharashtra</option>
+                             <option>Manipur</option>
+                             <option>Meghalaya</option>
+                             <option>Mizoram</option>
+                             <option>Nagaland</option>
+                             <option>Odisha</option>
+                             <option>Punjab</option>
+                             <option>Rajasthan</option>
+                             <option>Sikkim</option>
+                             <option>Tamil Nadu</option>
+                             <option>Telangana</option>
+                             <option>Tripura</option>
+                             <option>Uttar Pradesh</option>
+                             <option>Uttarakhand</option>
+                             <option>West Bengal</option>
+                          </select>
+                       </div>
+                       <!-- <input type="text" placeholder="india"> -->
+                    </div>
+                    <div class="inputBox">
+                       <span>zip code :</span>
+                       <input
+                          type="text"
+                          placeholder="123 456"
+                          name="pincode"
+                          onchange="handleChange(this.value,this.name)"
+                       />
+                    </div>
+                 </div>
+              </div>
+<!-- <img src="" alt=""> -->
+
+           <input type="submit" value="Submit Address " class="submit-btn" id="id-submit" />
+        </form>
+     </div>
+
+</body>
+</html>
+<script src="/Final_pharmesy/monu/Home/navbar.js"></script>
+<script>
+    let filledData = {
+       fullName: "",
+       email: "",
+       address: "",
+       city: "",
+       state: "Andhra Pradesh",
+       pincode: "",
+    //    paymentMode: "upi",
+    //    nameOnCard: "",
+    //    cardNumber: "",
+    //    expMonth: "",
+    //    expYear: "",
+    //    cvv: "",
+    };
+    var handleChange = (value, name) => {
+       filledData[name] = value;
+    };
+    var onStateChane = (value) => {
+       filledData.state = value;
+    };
+ 
+    var handlePaymentMethod = (value) => {
+       filledData.paymentMode = value;
+    };
+ 
+    var checkout = document.querySelector("#id-submit");
+    checkout.addEventListener("click", handleCheckout);
+ 
+    function handleCheckout(event) {
+       event.preventDefault();
+       let {
+          fullName,
+          email,
+          address,
+          city,
+          state,
+          pincode,
+        //   nameOnCard,
+        //   cardNumber,
+        //   expMonth,
+        //   expYear,
+        //   cvv,
+       } = filledData;
+       if (!fullName) {
+          alert("Full Name is required..!");
+       } else if (!email) {
+          alert("Email is required..!");
+       } else if (!address) {
+          alert("Address is required..!");
+       } else if (!city) {
+          alert("City is required..!");
+       } else if (!pincode) {
+          alert("Zip code is required..!");
+       }
+    // /  } else if (!nameOnCard) {
+    //       alert("Name On Crad is required..!");
+    //    } else if (!cardNumber) {
+    //       alert("Card Number is required..!");
+    //    } else if (cardNumber.length != 16) {
+    //       alert("Enter a valid number which is having 16 number..!");
+    //    } else if ( !expMonth) {
+    //       alert("Expire Month is required..!");
+    //    } else if (!expYear) {
+    //       alert("Enter atleat 3 characters..!");
+    //    } else if (cvv !=123) {
+    //       alert("Cvv is required..!");
+    //    }
+       else{
+         localStorage.setItem("paymentDetails",JSON.stringify(filledData))
+         window.location.href = "/Final_pharmesy/monu/Home/addtocart.html";
+       }
+    }
+ var price=JSON.pase(localStorage.getItem("amount"));
+ document.getElementById("id-submit").value+= amount;
+ 
+ 
+ </script>
