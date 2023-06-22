@@ -1,0 +1,128 @@
+
+#mainParentAshu{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+
+
+#parentAshu-4{
+background-color:rgb(174, 218, 220);
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 20px;
+margin-top: 100px;
+/* margin-left: 200px;
+margin-right: 200px; */
+}
+#parentAshu-4>div{
+background-color: aliceblue;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+text-align: center;
+border-radius: 10px;
+/* padding-bottom: 40px; */
+margin: 30px;
+
+}
+#parentAshu-4>div>img{
+width: 50%;
+padding-top: 25px;
+}
+#parentAshu-4>div:hover{
+border: 2px solid rgb(45, 128, 45);
+}
+h3{
+position: relative;
+margin-left: 2px;
+margin-bottom: -91px;
+font-size: 30px;
+}
+
+
+#parentDivAshu-1{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+margin-top: 100px;
+}  
+#parentDivAshu-1>div{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+text-align: center;
+border-radius: 10px;
+padding-bottom: 40px; 
+margin: 30px;
+
+}
+#parentDivAshu-1>div>img{
+width: 50%;
+padding-top: 25px;
+} 
+#parentDivAshu-1>div:hover{
+border: 1px solid rgb(45, 128, 45);
+}
+
+
+#parentDivAshu-2{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 20px;
+margin-top: 100px;
+}
+#parentDivAshu-2>div{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+text-align: center;
+border-radius: 10px;
+/* padding-bottom: 40px; */
+margin: 30px;
+
+}
+#parentDivAshu-2>div>img{
+width: 50%;
+padding-top: 25px;
+}
+#parentDivAshu-2>div:hover{
+border: 2px solid rgb(45, 128, 45);
+}
+
+ul{
+list-style:none ;
+}
+li::before{
+content: "•";
+color: green;
+display: inline-block; width: 1em;
+margin-left: -1em
+}
+
+#infoDiv-1{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
+#infoDiv-2{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
+#infoDiv-3{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
+#infoDiv-4{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
+#infoDiv-5{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
+#infoDiv-6{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
+#infoDiv-7{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
+#infoDiv-8{
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+padding: 10px;
+}
