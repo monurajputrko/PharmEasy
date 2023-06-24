@@ -297,7 +297,7 @@ var product_desc = [];
      function navToNextPage(product){
      product_desc.push(product);
      localStorage.setItem("Prodct-Data",JSON.stringify(product_desc));
-     window.location.href="../PharmEasy/monu/Product-Details/product-detail.html";
+     window.location.href="../../monu/Product-Details/product-detail.html";
  }
 
 var products = JSON.parse(localStorage.getItem("productInfo")) || [];
