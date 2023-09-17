@@ -19,8 +19,7 @@ var productArray = [{
     img1 :"https://cdn01.pharmeasy.in/dam/products_otc/Q79438/liveasy-foods-sugarfree-chyavanposh-900-gms-gives-2x-immunity-boosts-energy-2-1681475689.jpg?dim=100x0&dpr=1&q=100",
     img2 :"https://cdn01.pharmeasy.in/dam/products_otc/Q79438/liveasy-foods-sugarfree-chyavanposh-900-gms-gives-2x-immunity-boosts-energy-2-1681475689.jpg?dim=100x0&dpr=1&q=100",
     quantity : 1,
-    total : '299.5'
-    
+    total : '299.5' 
 },
    { id : 3,
     name : "Baidyanath Nagpur Honey",

@@ -43,8 +43,7 @@ var productArray2 = [{
     img1 : "https://cdn01.pharmeasy.in/dam/products_otc/H62199/everherb-by-pharmeasy-moringa-drum-stick-immunity-booster-capsules-natural-multivitamin-bottle-of-60-2-1661760057.jpg?dim=100x0&dpr=1&q=100",
     img2 :"https://cdn01.pharmeasy.in/dam/products_otc/H62199/everherb-by-pharmeasy-moringa-drum-stick-immunity-booster-capsules-natural-multivitamin-bottle-of-60-6.1-1661760088.jpg?dim=100x0&dpr=1&q=100",
     quantity : 1,
-    total : '299.50'
-    
+    total : '299.50' 
 },
    {id : 5,
     name : "Pharmeasy Multivitamin",

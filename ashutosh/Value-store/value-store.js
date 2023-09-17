@@ -22,7 +22,6 @@ var productArray3 = [{
     total : '299'
    
 },
-
 {   id : 3,
     name : "Everherb Aloe Vera Juice",
     img_url : "https://cdn01.pharmeasy.in/dam/products_otc/E54755/everherb-by-pharmeasy-aloe-vera-juice-with-pulp-rejuvenates-skin-hair-1-litre-bottle-2-1680172150.jpg?dim=700x0&dpr=1&q=100",
