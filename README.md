@@ -2,6 +2,7 @@
 
 This project is a clone of the popular online pharmacy platform, Pharmeasy. It aims to replicate the core features and functionalities of the original platform. The project utilizes modern web development technologies to create a user-friendly and responsive web application.
 
+
 ## Features
 
 - User Registration and Login: Users can create an account and log in to access the platform.
